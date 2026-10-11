@@ -139,6 +139,7 @@ export default function HpCards() {
           {examplesOpen && (card.examples.length ? <>
             {card.examples.map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
               <Text style={{fontSize:17,lineHeight:27,color:"#253656"}}>{highlight(e.text,e.surface)}</Text>
+              {(e as {ko?: string}).ko ? <Text style={{fontSize:15,lineHeight:23,color:"#4A5670"}}>{(e as {ko?: string}).ko}</Text> : null}
               <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker} / 대본 {e.page}쪽</Text>
             </View>)}
             <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요.</Text>
