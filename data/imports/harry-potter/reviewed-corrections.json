@@ -26497,5 +26497,451 @@
   "W-d4f37eb48c": {
     "exclude": true,
     "reviewed": true
+  },
+  "W-f1cbab31b5": {
+    "word": "Trevor",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-c7fa23fb5d": {
+    "word": "wan'",
+    "meaning": "원하다",
+    "note": "want의 사투리 표기",
+    "reviewed": true
+  },
+  "W-bf28edd9a0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-e4c623d0a2": {
+    "reviewed": true
+  },
+  "W-02c8294996": {
+    "reviewed": true
+  },
+  "W-47f325d7b0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f40e1a1c37": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-25d47c5122": {
+    "reviewed": true
+  },
+  "PHR-adde0bd801": {
+    "reviewed": true
+  },
+  "PHR-7653e7d20b": {
+    "reviewed": true
+  },
+  "PHR-00f70e8ff1": {
+    "reviewed": true
+  },
+  "PHR-a912e73a89": {
+    "reviewed": true
+  },
+  "PHR-742fc5f0f7": {
+    "reviewed": true
+  },
+  "PHR-265125bd31": {
+    "reviewed": true
+  },
+  "PHR-4cdff57ed5": {
+    "reviewed": true
+  },
+  "PHR-ddfc014ac8": {
+    "reviewed": true
+  },
+  "PHR-e96ce4075a": {
+    "reviewed": true
+  },
+  "PHR-0ebe14bf1f": {
+    "reviewed": true
+  },
+  "PHR-c1fcf1dbbe": {
+    "reviewed": true
+  },
+  "PHR-1779d5c191": {
+    "reviewed": true
+  },
+  "PHR-e275840b17": {
+    "reviewed": true
+  },
+  "PHR-4fbd22c04c": {
+    "reviewed": true
+  },
+  "PHR-6c4d12fed4": {
+    "reviewed": true
+  },
+  "PHR-77eb660927": {
+    "reviewed": true
+  },
+  "PHR-c508b3e17e": {
+    "reviewed": true
+  },
+  "PHR-02fd7f9abd": {
+    "reviewed": true
+  },
+  "PHR-4c90ef39c6": {
+    "reviewed": true
+  },
+  "PHR-7c3d4a9e80": {
+    "reviewed": true
+  },
+  "PHR-8ae4efd9d3": {
+    "reviewed": true
+  },
+  "PHR-a69066ce44": {
+    "reviewed": true
+  },
+  "PHR-b1c349ba04": {
+    "reviewed": true
+  },
+  "PHR-f5a27eadb0": {
+    "reviewed": true
+  },
+  "PHR-9d4e1d43fe": {
+    "reviewed": true
+  },
+  "PHR-912099ba5f": {
+    "reviewed": true
+  },
+  "PHR-baf8467113": {
+    "reviewed": true
+  },
+  "PHR-38517d84df": {
+    "reviewed": true
+  },
+  "PHR-865fd96b60": {
+    "reviewed": true
+  },
+  "PHR-1bdb887594": {
+    "reviewed": true
+  },
+  "PHR-32066b0e3f": {
+    "reviewed": true
+  },
+  "PHR-e2b7f4cea9": {
+    "reviewed": true
+  },
+  "PHR-87a8ad4eab": {
+    "alternative": "돌보다",
+    "reviewed": true
+  },
+  "PHR-eba1d2cb3e": {
+    "reviewed": true
+  },
+  "PHR-f89765d38f": {
+    "reviewed": true
+  },
+  "PHR-ade9e9ac9b": {
+    "reviewed": true
+  },
+  "PHR-6539a7687d": {
+    "reviewed": true
+  },
+  "PHR-1821c4989a": {
+    "reviewed": true
+  },
+  "PHR-cc622a7f4a": {
+    "reviewed": true
+  },
+  "PHR-d477326cd8": {
+    "reviewed": true
+  },
+  "PHR-502fd051a7": {
+    "reviewed": true
+  },
+  "PHR-d55f31a645": {
+    "reviewed": true
+  },
+  "PHR-a50aabed79": {
+    "reviewed": true
+  },
+  "PHR-f03f834896": {
+    "reviewed": true
+  },
+  "PHR-85bbda02b9": {
+    "reviewed": true
+  },
+  "PHR-5c27764477": {
+    "reviewed": true
+  },
+  "PHR-9cc4e5d00e": {
+    "reviewed": true
+  },
+  "PHR-e8947bf06f": {
+    "reviewed": true
+  },
+  "PHR-00284650ce": {
+    "reviewed": true
+  },
+  "PHR-4c8ee3ca9a": {
+    "reviewed": true
+  },
+  "PHR-43141dd4fd": {
+    "reviewed": true
+  },
+  "PHR-d940b2b376": {
+    "reviewed": true
+  },
+  "PHR-ef76bb1a33": {
+    "reviewed": true
+  },
+  "PHR-17b971a38c": {
+    "reviewed": true
+  },
+  "PHR-592fefff74": {
+    "reviewed": true
+  },
+  "PHR-1e677a0073": {
+    "reviewed": true
+  },
+  "PHR-d27122e4e8": {
+    "reviewed": true
+  },
+  "PHR-afc60f9501": {
+    "reviewed": true
+  },
+  "PHR-7c83afa10a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-a71d275dae": {
+    "reviewed": true
+  },
+  "PHR-99e648de1e": {
+    "reviewed": true
+  },
+  "PHR-2940d0ef76": {
+    "reviewed": true
+  },
+  "PHR-4b88d82153": {
+    "reviewed": true
+  },
+  "PHR-4c7f9de658": {
+    "reviewed": true
+  },
+  "PHR-f25b92d6e6": {
+    "reviewed": true
+  },
+  "PHR-a1a33f9087": {
+    "reviewed": true
+  },
+  "PHR-215939ed49": {
+    "reviewed": true
+  },
+  "PHR-81fb09af7c": {
+    "reviewed": true
+  },
+  "PHR-76d8ace169": {
+    "reviewed": true
+  },
+  "PHR-f4f9b1bfc5": {
+    "reviewed": true
+  },
+  "PHR-587e5b0868": {
+    "reviewed": true
+  },
+  "PHR-3ddc55a161": {
+    "reviewed": true
+  },
+  "PHR-7fa4027996": {
+    "reviewed": true
+  },
+  "PHR-7d912128d1": {
+    "reviewed": true
+  },
+  "PHR-ab64ed7f47": {
+    "reviewed": true
+  },
+  "PHR-b5b8d2938b": {
+    "reviewed": true
+  },
+  "PHR-ed2082eaaf": {
+    "reviewed": true
+  },
+  "PHR-ba70dfa7b1": {
+    "reviewed": true
+  },
+  "PHR-ff998f0a4e": {
+    "reviewed": true
+  },
+  "PHR-2e826612ed": {
+    "reviewed": true
+  },
+  "PHR-b2629a070b": {
+    "reviewed": true
+  },
+  "PHR-bfa6755f7e": {
+    "alternative": "나눠 주다",
+    "reviewed": true
+  },
+  "PHR-b5b3194bd2": {
+    "reviewed": true
+  },
+  "PHR-0204e1cc7a": {
+    "reviewed": true
+  },
+  "PHR-f992d959d3": {
+    "reviewed": true
+  },
+  "PHR-622b262880": {
+    "reviewed": true
+  },
+  "PHR-874ff409f1": {
+    "reviewed": true
+  },
+  "PHR-e29fba39ce": {
+    "reviewed": true
+  },
+  "PHR-108ff16ff5": {
+    "reviewed": true
+  },
+  "PHR-663fe95500": {
+    "reviewed": true
+  },
+  "PHR-1e02c8f839": {
+    "reviewed": true
+  },
+  "PHR-e5f7aa03bf": {
+    "reviewed": true
+  },
+  "PHR-3180afae2e": {
+    "reviewed": true
+  },
+  "PHR-2e1b1bc376": {
+    "reviewed": true
+  },
+  "PHR-4346278320": {
+    "reviewed": true
+  },
+  "PHR-ca603b4be5": {
+    "reviewed": true
+  },
+  "PHR-ae8f257375": {
+    "reviewed": true
+  },
+  "PHR-c430c8f28d": {
+    "reviewed": true
+  },
+  "PHR-a5dfa7f572": {
+    "reviewed": true
+  },
+  "PHR-ecbe00cd7e": {
+    "reviewed": true
+  },
+  "PHR-7173770e36": {
+    "reviewed": true
+  },
+  "PHR-dd1b4fdbe4": {
+    "reviewed": true
+  },
+  "PHR-929bfcfc36": {
+    "reviewed": true
+  },
+  "PHR-6e88d71049": {
+    "reviewed": true
+  },
+  "PHR-2383e5d86f": {
+    "reviewed": true
+  },
+  "PHR-612037e644": {
+    "reviewed": true
+  },
+  "PHR-666974c2d8": {
+    "reviewed": true
+  },
+  "PHR-f54d36a7e9": {
+    "reviewed": true
+  },
+  "PHR-230c80355a": {
+    "reviewed": true
+  },
+  "PHR-ec1831b5ee": {
+    "reviewed": true
+  },
+  "PHR-2ec9f8b95b": {
+    "reviewed": true
+  },
+  "PHR-4104b97be1": {
+    "reviewed": true
+  },
+  "PHR-6b82515fa6": {
+    "reviewed": true
+  },
+  "PHR-ebfbc99d05": {
+    "reviewed": true
+  },
+  "PHR-d93ada02f0": {
+    "reviewed": true
+  },
+  "PHR-23f34666a8": {
+    "reviewed": true
+  },
+  "PHR-03b3335498": {
+    "reviewed": true
+  },
+  "PHR-a43bc4a6b3": {
+    "reviewed": true
+  },
+  "PHR-f25f0367d2": {
+    "reviewed": true
+  },
+  "PHR-534f7b7d0b": {
+    "reviewed": true
+  },
+  "PHR-7ae995c5d2": {
+    "reviewed": true
+  },
+  "PHR-bf9e32f504": {
+    "reviewed": true
+  },
+  "PHR-3d7ac77cfc": {
+    "reviewed": true
+  },
+  "PHR-bc16f67baa": {
+    "reviewed": true
+  },
+  "PHR-0a35ac27a2": {
+    "reviewed": true
+  },
+  "PHR-a75adb3731": {
+    "reviewed": true
+  },
+  "PHR-ae074376f3": {
+    "reviewed": true
+  },
+  "PHR-7244a7f5cb": {
+    "reviewed": true
+  },
+  "PHR-87dd7a3fbf": {
+    "reviewed": true
+  },
+  "PHR-e67f30ec1b": {
+    "reviewed": true
+  },
+  "PHR-c17e207c83": {
+    "reviewed": true
+  },
+  "PHR-4739cbe3b9": {
+    "reviewed": true
+  },
+  "PHR-c96f3b7745": {
+    "reviewed": true
+  },
+  "PHR-27ea961b68": {
+    "reviewed": true
+  },
+  "PHR-48a8640d9b": {
+    "reviewed": true
+  },
+  "PHR-bb68e288bc": {
+    "reviewed": true
+  },
+  "PHR-7b6b8d8a08": {
+    "reviewed": true
   }
 }
