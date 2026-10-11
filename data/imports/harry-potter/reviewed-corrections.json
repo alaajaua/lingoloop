@@ -21925,5 +21925,794 @@
   },
   "W-862ea315d8": {
     "reviewed": true
+  },
+  "W-a99c89b8f7": {
+    "reviewed": true
+  },
+  "W-fb6ff68165": {
+    "reviewed": true
+  },
+  "W-ad3bf1ebb3": {
+    "reviewed": true
+  },
+  "W-ef42f45d8e": {
+    "reviewed": true
+  },
+  "W-397f4d9e12": {
+    "reviewed": true
+  },
+  "W-547650eeae": {
+    "reviewed": true
+  },
+  "W-b097923940": {
+    "reviewed": true
+  },
+  "W-b24c90e899": {
+    "reviewed": true
+  },
+  "W-3277d986ff": {
+    "reviewed": true
+  },
+  "W-74fef7a0c9": {
+    "reviewed": true
+  },
+  "W-9415bb1bae": {
+    "reviewed": true
+  },
+  "W-57b52ac80d": {
+    "reviewed": true
+  },
+  "W-202941aa0f": {
+    "reviewed": true
+  },
+  "W-a6e5b853ba": {
+    "reviewed": true
+  },
+  "W-eaed2d4e86": {
+    "reviewed": true
+  },
+  "W-d5a27d2ce2": {
+    "reviewed": true
+  },
+  "W-e089e21560": {
+    "word": "pick-me-up",
+    "pos": "명사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-8c4bad74ed": {
+    "reviewed": true
+  },
+  "W-ab3d51c5b1": {
+    "reviewed": true
+  },
+  "W-74e6b89a7f": {
+    "reviewed": true
+  },
+  "W-60d36500d1": {
+    "reviewed": true
+  },
+  "W-265193e21a": {
+    "reviewed": true
+  },
+  "W-774b20c2ed": {
+    "reviewed": true
+  },
+  "W-fa2aa4041b": {
+    "reviewed": true
+  },
+  "W-f942c1a28c": {
+    "reviewed": true
+  },
+  "W-7543c77e50": {
+    "reviewed": true
+  },
+  "W-9a6db229f5": {
+    "reviewed": true
+  },
+  "W-07c7afd31b": {
+    "word": "pointy-faced",
+    "reviewed": true
+  },
+  "W-77c1afa419": {
+    "reviewed": true
+  },
+  "W-76c7ab2739": {
+    "pos": "동사",
+    "meaning": "예고하다, 징조가 되다",
+    "note": "portent 징조",
+    "reviewed": true
+  },
+  "W-ef0293b95d": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-270646cf44": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-c03e7b9bab": {
+    "reviewed": true
+  },
+  "W-ab158b39a3": {
+    "reviewed": true
+  },
+  "W-35720277a0": {
+    "reviewed": true
+  },
+  "W-8e717d1c39": {
+    "word": "pre-dawn",
+    "reviewed": true
+  },
+  "W-2f24c21518": {
+    "reviewed": true
+  },
+  "W-7e8f3aae9e": {
+    "reviewed": true
+  },
+  "W-a33d4af87b": {
+    "reviewed": true
+  },
+  "W-87803e9833": {
+    "reviewed": true
+  },
+  "W-06fdea67cd": {
+    "reviewed": true
+  },
+  "W-42be0e5a90": {
+    "reviewed": true
+  },
+  "W-fb00595065": {
+    "reviewed": true
+  },
+  "W-04f6b1559d": {
+    "reviewed": true
+  },
+  "W-a33e4197ce": {
+    "reviewed": true
+  },
+  "W-e0b26ec46b": {
+    "reviewed": true
+  },
+  "W-374681e4d4": {
+    "reviewed": true
+  },
+  "W-e8ab04cd33": {
+    "reviewed": true
+  },
+  "W-e329a33226": {
+    "reviewed": true
+  },
+  "W-1b78c62e0e": {
+    "reviewed": true
+  },
+  "W-53a79d6351": {
+    "reviewed": true
+  },
+  "W-b98279ce8a": {
+    "reviewed": true
+  },
+  "W-a7d0b49fef": {
+    "reviewed": true
+  },
+  "W-fc2dca8d84": {
+    "reviewed": true
+  },
+  "W-046025c6f3": {
+    "reviewed": true
+  },
+  "W-d852301e43": {
+    "reviewed": true
+  },
+  "W-5cdf7811ee": {
+    "reviewed": true
+  },
+  "W-eb45c6c718": {
+    "reviewed": true
+  },
+  "W-0f2c0ac1fa": {
+    "reviewed": true
+  },
+  "W-eb8d5e2351": {
+    "reviewed": true
+  },
+  "W-49d1d6b045": {
+    "reviewed": true
+  },
+  "W-e6808c4c51": {
+    "reviewed": true
+  },
+  "W-bfce29808f": {
+    "reviewed": true
+  },
+  "W-ba2acd101e": {
+    "reviewed": true
+  },
+  "W-7d163d0cf7": {
+    "reviewed": true
+  },
+  "W-584199c24e": {
+    "reviewed": true
+  },
+  "W-8793747b1c": {
+    "reviewed": true
+  },
+  "W-e1f87e5054": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-7067b3f939": {
+    "word": "guise",
+    "note": "",
+    "reviewed": true
+  },
+  "W-8a7b059d54": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-aad1fd8a54": {
+    "reviewed": true
+  },
+  "W-fb6a5de6a0": {
+    "reviewed": true
+  },
+  "W-a594403250": {
+    "reviewed": true
+  },
+  "W-862d3ba8c3": {
+    "reviewed": true
+  },
+  "W-31c1cc0400": {
+    "reviewed": true
+  },
+  "W-44b5a8c898": {
+    "reviewed": true
+  },
+  "W-45f50f9401": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-928055ad66": {
+    "reviewed": true
+  },
+  "W-b21e4ac0fe": {
+    "reviewed": true
+  },
+  "W-80c0188e95": {
+    "reviewed": true
+  },
+  "W-29f5b97422": {
+    "reviewed": true
+  },
+  "W-638185416b": {
+    "reviewed": true
+  },
+  "W-bcdebaaf16": {
+    "reviewed": true
+  },
+  "W-e92383067c": {
+    "reviewed": true
+  },
+  "W-913ef7da85": {
+    "word": "re-pot",
+    "note": "",
+    "reviewed": true
+  },
+  "W-39f3454fc2": {
+    "reviewed": true
+  },
+  "W-ac8d7d9984": {
+    "reviewed": true
+  },
+  "W-d8bf5e021b": {
+    "reviewed": true
+  },
+  "W-10c4031dcc": {
+    "reviewed": true
+  },
+  "W-63417739ae": {
+    "reviewed": true
+  },
+  "W-3e9fee0fb1": {
+    "reviewed": true
+  },
+  "W-50ea41847c": {
+    "reviewed": true
+  },
+  "W-02ba281018": {
+    "reviewed": true
+  },
+  "W-3d588ad299": {
+    "reviewed": true
+  },
+  "W-ea2eb897e4": {
+    "reviewed": true
+  },
+  "W-03cd4e614e": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-e6d580bbd6": {
+    "reviewed": true
+  },
+  "W-820f76a403": {
+    "reviewed": true
+  },
+  "W-f03242e51a": {
+    "reviewed": true
+  },
+  "W-6ecace1f87": {
+    "reviewed": true
+  },
+  "W-8a3b6a0a09": {
+    "reviewed": true
+  },
+  "W-c284701e5c": {
+    "reviewed": true
+  },
+  "W-d1c648643b": {
+    "reviewed": true
+  },
+  "W-6557380e3a": {
+    "reviewed": true
+  },
+  "W-718acd8c49": {
+    "reviewed": true
+  },
+  "W-bc7bd9dfc8": {
+    "reviewed": true
+  },
+  "W-56b35161eb": {
+    "reviewed": true
+  },
+  "W-79f1d44fa8": {
+    "reviewed": true
+  },
+  "W-aa7d03891a": {
+    "reviewed": true
+  },
+  "W-312f32b56c": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-18419735b5": {
+    "reviewed": true
+  },
+  "W-b369ed445f": {
+    "reviewed": true
+  },
+  "W-190d2689bb": {
+    "reviewed": true
+  },
+  "W-58fb368206": {
+    "reviewed": true
+  },
+  "W-6ec270040c": {
+    "reviewed": true
+  },
+  "W-db84493062": {
+    "reviewed": true
+  },
+  "W-6e721bdf59": {
+    "reviewed": true
+  },
+  "W-51eac397cc": {
+    "reviewed": true
+  },
+  "W-840f9fceaa": {
+    "reviewed": true
+  },
+  "W-b9fbdb625f": {
+    "reviewed": true
+  },
+  "W-f517461ebf": {
+    "reviewed": true
+  },
+  "W-119eb78b85": {
+    "reviewed": true
+  },
+  "W-67ec47af37": {
+    "reviewed": true
+  },
+  "W-34c6d4116f": {
+    "reviewed": true
+  },
+  "W-1655c03369": {
+    "reviewed": true
+  },
+  "W-a9ba466563": {
+    "reviewed": true
+  },
+  "W-65ec4a96e2": {
+    "reviewed": true
+  },
+  "W-ed6f58276b": {
+    "reviewed": true
+  },
+  "W-3c20248bd8": {
+    "reviewed": true
+  },
+  "W-5e97796e8a": {
+    "reviewed": true
+  },
+  "W-ec782fce42": {
+    "reviewed": true
+  },
+  "W-053e7542a9": {
+    "reviewed": true
+  },
+  "W-6cdcf796b7": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-975be50f38": {
+    "reviewed": true
+  },
+  "W-23eef56a2c": {
+    "reviewed": true
+  },
+  "W-6b1d3ab455": {
+    "reviewed": true
+  },
+  "W-df54b354fe": {
+    "word": "ruby-encrusted",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-4369bcb939": {
+    "reviewed": true
+  },
+  "W-893d0c8b21": {
+    "reviewed": true
+  },
+  "W-77919966fb": {
+    "reviewed": true
+  },
+  "W-74e644b5f8": {
+    "reviewed": true
+  },
+  "W-9e9835ac15": {
+    "reviewed": true
+  },
+  "W-50196ef597": {
+    "reviewed": true
+  },
+  "W-cd03b9d45e": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-cb995fc5ca": {
+    "word": "sapphire",
+    "note": "",
+    "reviewed": true
+  },
+  "W-16d6aa7a42": {
+    "reviewed": true
+  },
+  "W-d3db802680": {
+    "word": "scabbed",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-fbda861059": {
+    "reviewed": true
+  },
+  "W-050fb18d14": {
+    "reviewed": true
+  },
+  "W-242d38841f": {
+    "reviewed": true
+  },
+  "W-89909b125e": {
+    "reviewed": true
+  },
+  "W-e4437ece7f": {
+    "reviewed": true
+  },
+  "W-d4c37c9590": {
+    "reviewed": true
+  },
+  "W-d8d682ae8c": {
+    "reviewed": true
+  },
+  "W-f65581e132": {
+    "reviewed": true
+  },
+  "W-2d993684ac": {
+    "reviewed": true
+  },
+  "W-8c0ec80ed2": {
+    "reviewed": true
+  },
+  "W-e7634c627c": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-01b433749c": {
+    "reviewed": true
+  },
+  "W-05297555c2": {
+    "reviewed": true
+  },
+  "W-17bc310ece": {
+    "reviewed": true
+  },
+  "W-5c45308ce7": {
+    "reviewed": true
+  },
+  "W-bdcbbdf033": {
+    "reviewed": true
+  },
+  "W-cfd48f1aeb": {
+    "reviewed": true
+  },
+  "W-63043b7284": {
+    "reviewed": true
+  },
+  "W-5bde892019": {
+    "reviewed": true
+  },
+  "W-ec8e83a535": {
+    "reviewed": true
+  },
+  "W-db7046502d": {
+    "reviewed": true
+  },
+  "W-56274c5326": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-3541e3d28b": {
+    "reviewed": true
+  },
+  "W-dafd659699": {
+    "reviewed": true
+  },
+  "W-e42c7e5f67": {
+    "reviewed": true
+  },
+  "W-12853f3bef": {
+    "word": "sharp-featured",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-4aeb47fab3": {
+    "reviewed": true
+  },
+  "W-18ed68ba27": {
+    "reviewed": true
+  },
+  "W-b2a26d4c91": {
+    "reviewed": true
+  },
+  "W-53d80f91dc": {
+    "reviewed": true
+  },
+  "W-3bcd75ff10": {
+    "reviewed": true
+  },
+  "W-2eeffa73e1": {
+    "reviewed": true
+  },
+  "W-36a4897e49": {
+    "reviewed": true
+  },
+  "W-39ddd7ef55": {
+    "reviewed": true
+  },
+  "W-f0f41a9839": {
+    "reviewed": true
+  },
+  "W-7f176a91b0": {
+    "reviewed": true
+  },
+  "W-66061f4903": {
+    "reviewed": true
+  },
+  "W-59490e2426": {
+    "reviewed": true
+  },
+  "W-ac2ed1905e": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-195ddf28f9": {
+    "reviewed": true
+  },
+  "W-16cecf9aae": {
+    "reviewed": true
+  },
+  "W-a4341d84b3": {
+    "word": "silver-white",
+    "reviewed": true
+  },
+  "W-23f33257d0": {
+    "reviewed": true
+  },
+  "W-ae0fcb9fbb": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-b53ec83492": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-6290999741": {
+    "reviewed": true
+  },
+  "W-77336b1aa8": {
+    "reviewed": true
+  },
+  "W-7b552487df": {
+    "reviewed": true
+  },
+  "W-be1d205530": {
+    "word": "skin-clinging",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-54f36698ba": {
+    "reviewed": true
+  },
+  "W-eb0795f3fe": {
+    "reviewed": true
+  },
+  "W-a4644320ba": {
+    "reviewed": true
+  },
+  "W-7fa0002713": {
+    "reviewed": true
+  },
+  "W-53862b3f68": {
+    "reviewed": true
+  },
+  "W-33aa1ee549": {
+    "reviewed": true
+  },
+  "W-6b73ee0538": {
+    "reviewed": true
+  },
+  "W-ca40815ff2": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-5c168d17fd": {
+    "reviewed": true
+  },
+  "W-cc85070e5d": {
+    "reviewed": true
+  },
+  "W-a4d5d9699d": {
+    "reviewed": true
+  },
+  "W-077fa6049f": {
+    "reviewed": true
+  },
+  "W-80a2eec40c": {
+    "reviewed": true
+  },
+  "W-d93ce55ac9": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-409c582ca5": {
+    "reviewed": true
+  },
+  "W-15a05e393c": {
+    "reviewed": true
+  },
+  "W-ed773782d0": {
+    "reviewed": true
+  },
+  "W-6bf14ccf1d": {
+    "reviewed": true
+  },
+  "W-6a904ffbab": {
+    "reviewed": true
+  },
+  "W-33c44e5e26": {
+    "reviewed": true
+  },
+  "W-77518f7d45": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-7e0770c603": {
+    "reviewed": true
+  },
+  "W-77b6da7d4b": {
+    "reviewed": true
+  },
+  "W-6c506f6e19": {
+    "reviewed": true
+  },
+  "W-15b25846aa": {
+    "reviewed": true
+  },
+  "W-cc62d57aee": {
+    "reviewed": true
+  },
+  "W-abcc14d415": {
+    "reviewed": true
+  },
+  "W-c7957c4bff": {
+    "reviewed": true
+  },
+  "W-2099580310": {
+    "reviewed": true
+  },
+  "W-83c41c2db8": {
+    "reviewed": true
+  },
+  "W-5478965976": {
+    "reviewed": true
+  },
+  "W-9c34b8409a": {
+    "reviewed": true
+  },
+  "W-b89e4c0ac4": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-77beae4085": {
+    "reviewed": true
+  },
+  "W-eb408465a6": {
+    "reviewed": true
+  },
+  "W-bd3c14b17b": {
+    "reviewed": true
+  },
+  "W-7a47844ad0": {
+    "reviewed": true
+  },
+  "W-7ac36f9550": {
+    "word": "sopping",
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-b22d8c2a6d": {
+    "reviewed": true
+  },
+  "W-a66149f684": {
+    "word": "spacy-looking",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-1036ff706d": {
+    "reviewed": true
+  },
+  "W-58080a1bc9": {
+    "reviewed": true
+  },
+  "W-266b270838": {
+    "reviewed": true
+  },
+  "W-cf690adb3e": {
+    "reviewed": true
+  },
+  "W-f22fe3a940": {
+    "reviewed": true
+  },
+  "W-ede2748cf3": {
+    "reviewed": true
+  },
+  "W-de7b58ffe8": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-cbed6f04fc": {
+    "word": "spine-chilling",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-0425c5e498": {
+    "reviewed": true
   }
 }
