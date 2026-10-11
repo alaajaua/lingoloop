@@ -27422,5 +27422,533 @@
   },
   "W-cffc913e16": {
     "reviewed": true
+  },
+  "W-c69a6d6aa0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c892bf9a13": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a55c896ea5": {
+    "reviewed": true
+  },
+  "W-424fad1c8a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-7cb634698f": {
+    "reviewed": true
+  },
+  "W-20539c175c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b4039ed508": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b2823262b8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-95c79a2016": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-e2135736e9": {
+    "reviewed": true
+  },
+  "W-1f38de4685": {
+    "pos": "감탄사",
+    "reviewed": true
+  },
+  "W-db7f880c6e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a1ed537764": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-22a458f729": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a405c884ec": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-59cd2612fb": {
+    "word": "Honeydukes",
+    "pos": "고유명사",
+    "note": "호그스미드의 과자 가게",
+    "reviewed": true
+  },
+  "W-b55441583b": {
+    "reviewed": true
+  },
+  "W-2ff0b96913": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-45f14ac5a1": {
+    "reviewed": true
+  },
+  "W-041f981dda": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-25bd09034e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ccc6ecfd68": {
+    "reviewed": true
+  },
+  "W-6f90723bf4": {
+    "reviewed": true
+  },
+  "W-b2afdea448": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f5c675f040": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-89f38c24a8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b88c58aaaa": {
+    "word": "lacewing",
+    "pos": "명사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-83b5f90021": {
+    "reviewed": true
+  },
+  "W-ece4babdcb": {
+    "pos": "명사",
+    "meaning": "백합",
+    "alternative": "",
+    "note": "인명 Lily로도 쓰임",
+    "reviewed": true
+  },
+  "W-a82a9d0cba": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9580e89530": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-3cc38f761d": {
+    "word": "Lovegood",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-4501d9fb94": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-4f954e6235": {
+    "reviewed": true
+  },
+  "W-060be75bf1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-83c3078d6a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b7a3b8603b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-71b5c3d32b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9bad61e377": {
+    "pos": "동사",
+    "reviewed": true
+  },
+  "W-de287a0ccb": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-25f3f37d09": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d2f88d518d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-8d553a7691": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-afcb6e115d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d5052e753f": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-890ed24263": {
+    "word": "Obliviate",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-c95385c2f7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ed39db21f8": {
+    "reviewed": true
+  },
+  "W-36d482610c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a136128b30": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-091171ed1d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-2899514871": {
+    "word": "Parselmouth",
+    "reviewed": true
+  },
+  "W-b9aa46a677": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f67e261e9e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-cc91f88de0": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-a7e577fd88": {
+    "reviewed": true
+  },
+  "W-36a01e06dc": {
+    "reviewed": true
+  },
+  "W-9161e4f2ac": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-37ec039b06": {
+    "reviewed": true
+  },
+  "W-10d69b4f91": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-e0c731bc79": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-faec04679d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4ed1ad1c0c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b246467409": {
+    "reviewed": true
+  },
+  "W-fe404ecc8c": {
+    "reviewed": true
+  },
+  "W-e2154d9cf9": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-25644641a4": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-85dcbfcff8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d81cdb9773": {
+    "reviewed": true
+  },
+  "W-8e8232d0a1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d6fbba5a2d": {
+    "reviewed": true
+  },
+  "W-59de482602": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-0f1cd361e8": {
+    "reviewed": true
+  },
+  "W-223c50c5c7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-cd4f44a871": {
+    "word": "spare",
+    "meaning": "(목숨을) 살려 주다, 아끼다",
+    "alternative": "",
+    "note": "",
+    "reviewed": true
+  },
+  "W-143b7e2454": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4319a8a47a": {
+    "reviewed": true
+  },
+  "W-afc16ce763": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-27bbc1acf8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-856a8d1346": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f17ad5dca8": {
+    "word": "torch-lit",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-b5f8ad2c01": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-6d20ac4317": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c24700be3d": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-323ea3667f": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5967a6c2e5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-bc4c1686d5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ed0b187cd7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ed293be623": {
+    "reviewed": true
+  },
+  "W-99f520217f": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-469a5393ec": {
+    "reviewed": true
+  },
+  "W-6cf6e457e3": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-937189c212": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-bcfadde254": {
+    "pos": "전치사",
+    "reviewed": true
+  },
+  "W-321757abe1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-de3b6d90f6": {
+    "reviewed": true
+  },
+  "W-52152e1773": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-58fbfe25b7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-4498e25e16": {
+    "reviewed": true
+  },
+  "PHR-fc0ae71648": {
+    "reviewed": true
+  },
+  "PHR-cdba8939db": {
+    "reviewed": true
+  },
+  "PHR-f657f3f908": {
+    "alternative": "~앞에 나타나다",
+    "reviewed": true
+  },
+  "PHR-dc64ec5a2f": {
+    "reviewed": true
+  },
+  "PHR-9b4cc997fb": {
+    "reviewed": true
+  },
+  "PHR-1d0ebe04b4": {
+    "reviewed": true
+  },
+  "PHR-31a876cf20": {
+    "reviewed": true
+  },
+  "PHR-8bb465c147": {
+    "reviewed": true
+  },
+  "PHR-20852c99ff": {
+    "reviewed": true
+  },
+  "PHR-21ecca4b88": {
+    "reviewed": true
+  },
+  "PHR-7554bfd565": {
+    "reviewed": true
+  },
+  "PHR-f5d920331e": {
+    "reviewed": true
+  },
+  "PHR-eac9700d78": {
+    "reviewed": true
+  },
+  "PHR-4243411fed": {
+    "reviewed": true
+  },
+  "PHR-6fa62ee1c4": {
+    "reviewed": true
+  },
+  "PHR-e9cc2d061e": {
+    "reviewed": true
+  },
+  "PHR-79a3995622": {
+    "reviewed": true
+  },
+  "PHR-64cdbbd4f3": {
+    "reviewed": true
+  },
+  "PHR-19063b1246": {
+    "reviewed": true
+  },
+  "PHR-51791f30b0": {
+    "reviewed": true
+  },
+  "PHR-cb78b69e06": {
+    "reviewed": true
+  },
+  "PHR-64f098058d": {
+    "reviewed": true
+  },
+  "PHR-b8306f001b": {
+    "reviewed": true
+  },
+  "PHR-d1318d57c4": {
+    "reviewed": true
+  },
+  "PHR-4a327369f6": {
+    "reviewed": true
+  },
+  "PHR-25880dc49a": {
+    "reviewed": true
+  },
+  "PHR-4b2a34b706": {
+    "reviewed": true
+  },
+  "PHR-b86198ab59": {
+    "reviewed": true
+  },
+  "PHR-4b7b395b07": {
+    "reviewed": true
+  },
+  "PHR-1d77c6b84e": {
+    "reviewed": true
+  },
+  "PHR-889bb140a4": {
+    "reviewed": true
+  },
+  "PHR-c319e1c862": {
+    "reviewed": true
+  },
+  "PHR-5cf2e9d464": {
+    "reviewed": true
+  },
+  "PHR-5d8df71a94": {
+    "reviewed": true
+  },
+  "PHR-ae50233b4a": {
+    "reviewed": true
+  },
+  "PHR-170cbc70d3": {
+    "reviewed": true
+  },
+  "PHR-ef5e99eda1": {
+    "reviewed": true
+  },
+  "PHR-92f7d5111b": {
+    "reviewed": true
+  },
+  "PHR-faecd4db6a": {
+    "reviewed": true
+  },
+  "PHR-d9cff4bd43": {
+    "reviewed": true
+  },
+  "PHR-e45f5659db": {
+    "reviewed": true
+  },
+  "PHR-b4ea6d0240": {
+    "reviewed": true
+  },
+  "PHR-fd8fad47d3": {
+    "reviewed": true
+  },
+  "PHR-c9d3d1f17e": {
+    "reviewed": true
+  },
+  "PHR-069d9a4d5b": {
+    "reviewed": true
+  },
+  "PHR-18afac827c": {
+    "reviewed": true
   }
 }
