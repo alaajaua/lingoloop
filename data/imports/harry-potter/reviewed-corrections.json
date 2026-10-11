@@ -25984,5 +25984,518 @@
   },
   "PHR-6580df80f7": {
     "reviewed": true
+  },
+  "PHR-4de1e63706": {
+    "meaning": "~을 믿다; ~이겠지",
+    "reviewed": true
+  },
+  "PHR-c64d24fe2a": {
+    "reviewed": true
+  },
+  "PHR-0a5894e466": {
+    "reviewed": true
+  },
+  "PHR-cb59db70de": {
+    "reviewed": true
+  },
+  "PHR-b49213e88b": {
+    "reviewed": true
+  },
+  "PHR-cbdb1bebba": {
+    "reviewed": true
+  },
+  "PHR-d82a0afa7a": {
+    "reviewed": true
+  },
+  "PHR-103f11ad09": {
+    "reviewed": true
+  },
+  "PHR-1430c70968": {
+    "reviewed": true
+  },
+  "PHR-48a26749ee": {
+    "reviewed": true
+  },
+  "PHR-48c41e1b5a": {
+    "reviewed": true
+  },
+  "PHR-b6cdeb833a": {
+    "meaning": "~에 대해 거짓말하다",
+    "alternative": "빈둥거리다",
+    "reviewed": true
+  },
+  "PHR-6e0cd79d15": {
+    "reviewed": true
+  },
+  "PHR-40c753ea89": {
+    "reviewed": true
+  },
+  "PHR-46fdcd04a5": {
+    "reviewed": true
+  },
+  "PHR-70a99011c0": {
+    "reviewed": true
+  },
+  "PHR-c87e369e1e": {
+    "reviewed": true
+  },
+  "PHR-e81ad08782": {
+    "reviewed": true
+  },
+  "PHR-4f87065d30": {
+    "alternative": "화해하다 (make up with); 만회하다 (make up for)",
+    "reviewed": true
+  },
+  "PHR-221888b7ec": {
+    "reviewed": true
+  },
+  "PHR-e79cf45d03": {
+    "reviewed": true
+  },
+  "PHR-d3192bded7": {
+    "reviewed": true
+  },
+  "PHR-eb0940dbae": {
+    "reviewed": true
+  },
+  "PHR-d5cfe15adc": {
+    "reviewed": true
+  },
+  "PHR-521db2c14a": {
+    "reviewed": true
+  },
+  "PHR-f3f3b9aa3d": {
+    "reviewed": true
+  },
+  "PHR-f5f83ec913": {
+    "reviewed": true
+  },
+  "PHR-ba6c2db61a": {
+    "reviewed": true
+  },
+  "PHR-56df263063": {
+    "reviewed": true
+  },
+  "PHR-9f000ccf2b": {
+    "reviewed": true
+  },
+  "PHR-efe6288edc": {
+    "reviewed": true
+  },
+  "PHR-5e31f625b3": {
+    "reviewed": true
+  },
+  "PHR-0c33cbaf8d": {
+    "reviewed": true
+  },
+  "PHR-b17eb34f1e": {
+    "reviewed": true
+  },
+  "PHR-f0867d23e3": {
+    "reviewed": true
+  },
+  "PHR-2fc460f569": {
+    "reviewed": true
+  },
+  "PHR-72ba0682c2": {
+    "reviewed": true
+  },
+  "PHR-3b97ed7c47": {
+    "reviewed": true
+  },
+  "PHR-a759598828": {
+    "reviewed": true
+  },
+  "PHR-8374e453af": {
+    "reviewed": true
+  },
+  "PHR-a9fd484562": {
+    "reviewed": true
+  },
+  "PHR-7c9e8ffacd": {
+    "reviewed": true
+  },
+  "PHR-008863bcfe": {
+    "reviewed": true
+  },
+  "PHR-15210764ba": {
+    "reviewed": true
+  },
+  "PHR-8578fe03df": {
+    "reviewed": true
+  },
+  "PHR-39af30ae5e": {
+    "reviewed": true
+  },
+  "PHR-2c49e22a0d": {
+    "reviewed": true
+  },
+  "PHR-dcd562b769": {
+    "reviewed": true
+  },
+  "PHR-37bd348240": {
+    "reviewed": true
+  },
+  "PHR-a489ded85c": {
+    "reviewed": true
+  },
+  "PHR-d37821fc18": {
+    "reviewed": true
+  },
+  "PHR-bf4eb04895": {
+    "reviewed": true
+  },
+  "PHR-28b178e75c": {
+    "reviewed": true
+  },
+  "PHR-9579e34fda": {
+    "reviewed": true
+  },
+  "PHR-a7120c8a4d": {
+    "reviewed": true
+  },
+  "PHR-018e6b22cd": {
+    "reviewed": true
+  },
+  "PHR-fbf0eee864": {
+    "reviewed": true
+  },
+  "PHR-74a5c71495": {
+    "reviewed": true
+  },
+  "PHR-80b0b50cdc": {
+    "reviewed": true
+  },
+  "PHR-0979fe253c": {
+    "reviewed": true
+  },
+  "PHR-89deee5f9d": {
+    "reviewed": true
+  },
+  "PHR-a0a4296cd7": {
+    "reviewed": true
+  },
+  "PHR-0d3aa0e9c2": {
+    "reviewed": true
+  },
+  "PHR-7a7fea2411": {
+    "reviewed": true
+  },
+  "PHR-5eac350966": {
+    "reviewed": true
+  },
+  "PHR-6b30597ef3": {
+    "reviewed": true
+  },
+  "PHR-92b34f6cea": {
+    "reviewed": true
+  },
+  "PHR-22737e3f62": {
+    "reviewed": true
+  },
+  "PHR-1b4b9293b1": {
+    "reviewed": true
+  },
+  "PHR-413c05072a": {
+    "reviewed": true
+  },
+  "PHR-aec0992a46": {
+    "reviewed": true
+  },
+  "PHR-3a3f7d4426": {
+    "reviewed": true
+  },
+  "PHR-64199b672c": {
+    "reviewed": true
+  },
+  "PHR-24a15494c1": {
+    "reviewed": true
+  },
+  "PHR-229320b3db": {
+    "reviewed": true
+  },
+  "W-127bca046a": {
+    "reviewed": true
+  },
+  "W-7e2bc01244": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b0afbc02b8": {
+    "reviewed": true
+  },
+  "W-760ae56fa1": {
+    "word": "'cept",
+    "pos": "전치사",
+    "reviewed": true
+  },
+  "W-8c8796980b": {
+    "reviewed": true
+  },
+  "W-92b2bdfb1e": {
+    "reviewed": true
+  },
+  "W-9bd37633fc": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-167dd4049c": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-f91fea13b3": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5b964bd441": {
+    "reviewed": true
+  },
+  "W-21fe051c6b": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-927a497f66": {
+    "reviewed": true
+  },
+  "W-0d8a0260fd": {
+    "word": "Dolores",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-0d77efacf5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-39ff9a1406": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d78f332e7e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9e16571198": {
+    "reviewed": true
+  },
+  "W-03ca0d69c4": {
+    "word": "firs'",
+    "pos": "형용사",
+    "note": "first의 사투리 표기",
+    "reviewed": true
+  },
+  "W-ec98c642af": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-f11f17292c": {
+    "word": "Galleon",
+    "reviewed": true
+  },
+  "W-599393deb6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-7b6ee06f6b": {
+    "word": "Goyle",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-dcce7de244": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b19ef2aa1a": {
+    "word": "Granger",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-e3c750689a": {
+    "word": "Griphook",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-e5bce58151": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-44a06f6ba0": {
+    "reviewed": true
+  },
+  "W-11a61308cc": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-38b5c3c718": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-209cb8adc0": {
+    "reviewed": true
+  },
+  "W-eeb82778ca": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-322e7020aa": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4b8fa3c965": {
+    "pos": "명사",
+    "meaning": "그와 같은 것",
+    "note": "and the like 등등",
+    "reviewed": true
+  },
+  "W-b21e0dfc30": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-69cf685794": {
+    "reviewed": true
+  },
+  "W-af946a6d67": {
+    "word": "Muggle",
+    "reviewed": true
+  },
+  "W-6716159e8d": {
+    "reviewed": true
+  },
+  "W-c50ecc780c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-adc9d0505f": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-720af6b43f": {
+    "reviewed": true
+  },
+  "W-ea2838abed": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-470ba409df": {
+    "reviewed": true
+  },
+  "W-226bfe3778": {
+    "word": "nuthin'",
+    "pos": "대명사",
+    "meaning": "아무것도",
+    "note": "nothing의 사투리 표기",
+    "reviewed": true
+  },
+  "W-128291d050": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-32d656050f": {
+    "word": "Occlumency",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-30db054aed": {
+    "reviewed": true
+  },
+  "W-40396ee116": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-84a5fe5fe4": {
+    "reviewed": true
+  },
+  "W-b58f794a52": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9945fa89d0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4c5d780275": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b31d2f6e8b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-80ec57a4c8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9c6b3ca17b": {
+    "word": "Ron",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-26a1a26148": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-bb672388b6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a7a75819ed": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f9d4006ac6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6ef97b2708": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f81a8627f9": {
+    "word": "Severus",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-82ff310199": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-cae07ae3a6": {
+    "word": "somethin'",
+    "pos": "대명사",
+    "note": "something의 사투리 표기",
+    "reviewed": true
+  },
+  "W-80a5ccba2d": {
+    "reviewed": true
+  },
+  "W-5259331f9f": {
+    "reviewed": true
+  },
+  "W-b343e56650": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-144528b850": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-544c7e2c1a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6b087957c6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-2226b4f360": {
+    "reviewed": true
+  },
+  "W-d4f37eb48c": {
+    "exclude": true,
+    "reviewed": true
   }
 }
