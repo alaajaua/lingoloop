@@ -1,0 +1,39 @@
+{
+  "name": "lingoloop",
+  "private": true,
+  "packageManager": "npm@11.19.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:mobile": "npm run dev -w @lingoloop/mobile",
+    "dev:api": "npm run dev -w @lingoloop/api",
+    "dev:admin": "npm run dev -w @lingoloop/admin",
+    "build": "turbo run build",
+    "lint": "eslint .",
+    "typecheck": "turbo run typecheck",
+    "test": "tsx --tsconfig apps/api/tsconfig.json --test --test-concurrency=1 tests/*.test.ts",
+    "infra:up": "docker compose up -d",
+    "infra:down": "docker compose down",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate deploy",
+    "test:auth": "tsx --tsconfig apps/api/tsconfig.json --test tests/auth.integration.test.ts",
+    "admin:role": "tsx scripts/admin-role.ts"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^22.15.0",
+    "eslint": "^9.39.0",
+    "prisma": "^6.19.3",
+    "tsx": "^4.20.0",
+    "turbo": "^2.5.0",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.60.0"
+  }
+}

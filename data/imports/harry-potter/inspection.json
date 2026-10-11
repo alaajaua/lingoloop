@@ -1,0 +1,17 @@
+{
+  "source": "/Users/seoyoung/프로젝트/Harrt Potter/data/output/hp_vocab_app.csv",
+  "sha256": "4ae5ed40c4b34f886a7d29754803c7c7742f8f186e8c653bb5107d10b127732d",
+  "total": 10583,
+  "types": {
+    "word": 8377,
+    "phrase": 2206
+  },
+  "missingCefr": 2905,
+  "duplicateIds": 0,
+  "missingKoreanMeaning": 0,
+  "missingFieldsForCurrentQuiz": [
+    "sentenceKo",
+    "audioUrl"
+  ],
+  "status": "source preserved; not published"
+}

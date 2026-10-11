@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+}
+main {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  padding: 40px 24px;
+}
+main > header,
+main > .panel,
+main > .toolbar,
+main > .workspace,
+main > p {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h1 {
+  font-size: clamp(28px, 4vw, 40px);
+}
+p {
+  line-height: 1.7;
+}
+.brand {
+  color: var(--brand);
+  font-weight: 700;
+}
+.muted {
+  color: var(--muted);
+}
+.error {
+  color: var(--error);
+}
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 24px;
+}
+.login {
+  max-width: 520px !important;
+  margin-top: 40px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  margin: 16px 0;
+}
+input,
+textarea,
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  min-height: 44px;
+  padding: 12px;
+  width: 100%;
+}
+textarea {
+  min-height: 80px;
+}
+button {
+  font: inherit;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+button.primary {
+  background: var(--brand);
+  color: var(--inverse);
+  border-color: var(--brand);
+}
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 2px;
+}
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 320px minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+.word-list {
+  list-style: none;
+  padding: 0;
+}
+.word-list button {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 8px 0;
+}
+.word-list button[aria-current="true"] {
+  background: var(--tint);
+  border-color: var(--brand);
+}
+.word-list span {
+  font-size: 13px;
+  color: var(--muted);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+fieldset {
+  padding: 0;
+  border: 0;
+  min-width: 0;
+}
+fieldset > button {
+  margin: 16px 8px 0 0;
+}
+.meaning {
+  border-top: 1px solid var(--border);
+  margin-top: 24px;
+}
+.example {
+  background: var(--bg);
+  padding: 20px;
+  border-radius: 16px;
+  margin: 16px 0;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+@media (max-width: 800px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  main {
+    padding: 24px 16px;
+  }
+  .panel {
+    padding: 20px;
+  }
+}
+
+.bulk-import {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+.import-table {
+  overflow: auto;
+  max-height: 480px;
+  margin: 20px 0;
+}
+.import-table table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+.import-table th,
+.import-table td {
+  padding: 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+.import-table pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  max-width: 520px;
+}
+.bulk-import a {
+  color: var(--brand);
+}

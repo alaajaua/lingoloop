@@ -1,0 +1,6 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    { "name": "hp-cards-preview", "runtimeExecutable": "node", "runtimeArgs": ["scripts/mobile-preview.mjs"], "port": 8090 }
+  ]
+}

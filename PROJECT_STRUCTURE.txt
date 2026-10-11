@@ -1,0 +1,16 @@
+lingoloop/
+├── apps/
+│   ├── mobile/
+│   ├── api/
+│   └── admin/
+├── packages/
+│   ├── ui/
+│   ├── types/
+│   ├── config/
+│   ├── learning-engine/
+│   └── analytics/
+├── prisma/
+├── docs/
+├── scripts/
+├── README.md
+└── turbo.json

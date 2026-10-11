@@ -1,0 +1,191 @@
+generator client {
+ provider = "prisma-client-js"
+}
+datasource db {
+ provider = "postgresql"
+ url = env("DATABASE_URL")
+}
+model User {
+ id String @id @default(cuid())
+ email String @unique
+ passwordHash String?
+ authProvider String @default("email")
+ role UserRole @default(learner)
+ name String?
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ profile UserProfile?
+ sessions AuthSession[]
+ learningSessions LearningSession[]
+ reviews WordReview[]
+ levelTests LevelTest[]
+}
+model UserProfile {
+ id String @id @default(cuid())
+ userId String @unique
+ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ learningGoals String[] @default([])
+ selfReportedLevel Int?
+ skillLevel Float @default(5)
+ dailyGoal Int @default(20)
+ timezone String @default("Asia/Seoul")
+ onboardingCompleted Boolean @default(false)
+ termsVersion String
+ termsAcceptedAt DateTime @default(now())
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+}
+model AuthSession {
+ id String @id @default(cuid())
+ userId String
+ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ refreshHash String @unique
+ expiresAt DateTime
+ revokedAt DateTime?
+ createdAt DateTime @default(now())
+ @@index([userId])
+}
+
+enum UserRole {
+ learner
+ admin
+}
+enum ContentStatus {
+ draft
+ review
+ published
+ archived
+}
+model Word {
+ id String @id @default(cuid())
+ lemma String
+ displayWord String
+ partOfSpeech String
+ difficulty Float
+ frequencyRank Int?
+ tags String[] @default([])
+ status ContentStatus @default(draft)
+ revision Int @default(1)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ meanings WordMeaning[]
+ examples Example[]
+ audits ContentAudit[]
+ reviews WordReview[]
+ @@index([status, updatedAt])
+}
+model WordMeaning {
+ id String @id @default(cuid())
+ wordId String
+ word Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
+ meaningKo String
+ definitionEn String?
+ senseOrder Int
+ examples Example[]
+ @@unique([wordId, senseOrder])
+}
+model Example {
+ id String @id @default(cuid())
+ wordId String
+ word Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
+ meaningId String
+ meaning WordMeaning @relation(fields: [meaningId], references: [id], onDelete: Cascade)
+ sentenceEn String
+ sentenceKo String
+ targetForm String
+ explanation String?
+ audioUrl String?
+ difficulty Float
+}
+model ContentAudit {
+ id String @id @default(cuid())
+ wordId String
+ word Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
+ actorId String
+ action String
+ fromStatus ContentStatus?
+ toStatus ContentStatus
+ revision Int
+ createdAt DateTime @default(now())
+ @@index([wordId, createdAt])
+}
+
+model ContentImport {
+ id String @id @default(cuid())
+ actorId String
+ requestId String
+ inputHash String
+ result Json
+ createdAt DateTime @default(now())
+ @@unique([actorId, requestId])
+}
+
+model LearningSession {
+ cards Json?
+ source String @default("sample")
+ id String @id @default(cuid())
+ userId String
+ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ queue Int[]
+ cursor Int @default(0)
+ hinted Boolean @default(false)
+ completed Boolean @default(false)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ attempts LearningAttempt[]
+ @@index([userId, completed])
+}
+model LearningAttempt {
+ id String @id @default(cuid())
+ sessionId String
+ session LearningSession @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+ position Int
+ wordIndex Int
+ answer String
+ skipped Boolean
+ hintUsed Boolean
+ correct Boolean
+ createdAt DateTime @default(now())
+ @@unique([sessionId, position])
+}
+
+model WordReview {
+ id String @id @default(cuid())
+ userId String
+ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ wordId String
+ word Word @relation(fields: [wordId], references: [id], onDelete: Cascade)
+ stage Int @default(0)
+ nextReviewAt DateTime
+ updatedAt DateTime @updatedAt
+ @@unique([userId, wordId])
+ @@index([userId, nextReviewAt])
+}
+
+model LevelTest {
+ id String @id @default(cuid())
+ userId String
+ user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+ cards Json
+ used Int[]
+ currentIndex Int
+ estimate Float
+ cursor Int @default(0)
+ completed Boolean @default(false)
+ createdAt DateTime @default(now())
+ updatedAt DateTime @updatedAt
+ attempts LevelTestAttempt[]
+ @@index([userId, completed])
+}
+model LevelTestAttempt {
+ id String @id @default(cuid())
+ sessionId String
+ session LevelTest @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+ position Int
+ cardIndex Int
+ answer String
+ skipped Boolean
+ correct Boolean
+ createdAt DateTime @default(now())
+ @@unique([sessionId, position])
+}

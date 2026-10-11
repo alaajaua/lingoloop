@@ -1,0 +1,32 @@
+[
+  {
+    "sentence": "I eat an apple.",
+    "audioUrl": "/audio/bef067df2765793de6533e27e2d8563cd157809b6cc7cbca0af642d2684f2221.wav",
+    "seconds": 0.9,
+    "voice": "macOS Samantha, synthesized, local development"
+  },
+  {
+    "sentence": "This book is interesting.",
+    "audioUrl": "/audio/2b90bba12b376f3c7e6b147ae140ddca604c87c5bf4abedef5c2fe468ad60bdc.wav",
+    "seconds": 1.28,
+    "voice": "macOS Samantha, synthesized, local development"
+  },
+  {
+    "sentence": "I met her yesterday.",
+    "audioUrl": "/audio/6faf1d98d2bffe6c3ba845f98c9aa371c2e9a02bf2598381df14b33de440dba8.wav",
+    "seconds": 1.15,
+    "voice": "macOS Samantha, synthesized, local development"
+  },
+  {
+    "sentence": "She is happy today.",
+    "audioUrl": "/audio/4f2dec16ca458f428d1b0ea16ffd85fb85041349d7f5f16e112d9b98aed6880e.wav",
+    "seconds": 1.25,
+    "voice": "macOS Samantha, synthesized, local development"
+  },
+  {
+    "sentence": "We learn English every day.",
+    "audioUrl": "/audio/60c1a8d70df7beac6978d17c395f2ffe1ca6ff2bd396cc5c76c9c9cf5ef20beb.wav",
+    "seconds": 1.4,
+    "voice": "macOS Samantha, synthesized, local development"
+  }
+]

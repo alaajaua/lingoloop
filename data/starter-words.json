@@ -1,0 +1,202 @@
+[
+  {
+    "word": "water",
+    "meaning": "물",
+    "pos": "noun",
+    "difficulty": 2,
+    "sentence": "I drink water every morning.",
+    "translation": "나는 매일 아침 물을 마신다.",
+    "note": "water는 여기서 마시는 물을 뜻합니다.",
+    "audioUrl": "/audio/3fb131857f94e5622dbfda5e0b5a183813f3287881c51922b86fb5ab80a4de3c.wav"
+  },
+  {
+    "word": "friend",
+    "meaning": "친구",
+    "pos": "noun",
+    "difficulty": 3,
+    "sentence": "She is my best friend.",
+    "translation": "그녀는 나의 가장 친한 친구다.",
+    "note": "best friend는 가장 친한 친구라는 뜻입니다.",
+    "audioUrl": "/audio/565b21e79ea719400d758be4c516d75a7a1ad8ce27ee7a9b60d6871e779ffb10.wav"
+  },
+  {
+    "word": "house",
+    "meaning": "집",
+    "pos": "noun",
+    "difficulty": 4,
+    "sentence": "They live in a small house.",
+    "translation": "그들은 작은 집에 산다.",
+    "note": "house는 사람이 사는 건물을 뜻합니다.",
+    "audioUrl": "/audio/2e8d58df7b427cfec98a5e24b40a4b8a08a1bbe0a507b43b2642154c84758160.wav"
+  },
+  {
+    "word": "travel",
+    "meaning": "여행하다",
+    "pos": "verb",
+    "difficulty": 6,
+    "sentence": "We travel by train.",
+    "translation": "우리는 기차로 여행한다.",
+    "note": "by train은 기차를 이용한다는 뜻입니다.",
+    "audioUrl": "/audio/bd4f884d8ee48c89cf31d59b8abaa739480e7eba212811214aefd77b8ea24174.wav"
+  },
+  {
+    "word": "arrive",
+    "meaning": "도착하다",
+    "pos": "verb",
+    "difficulty": 7,
+    "sentence": "Please arrive before noon.",
+    "translation": "정오 전에 도착해 주세요.",
+    "note": "before noon은 정오 전이라는 뜻입니다.",
+    "audioUrl": "/audio/b87458e677dce42384b7cec6e80a4a039dc96d9478e03e33c3c0fccc03f84c5f.wav"
+  },
+  {
+    "word": "decide",
+    "meaning": "결정하다",
+    "pos": "verb",
+    "difficulty": 8,
+    "sentence": "We need to decide today.",
+    "translation": "우리는 오늘 결정해야 한다.",
+    "note": "need to 뒤에는 동사원형이 옵니다.",
+    "audioUrl": "/audio/11259b665800ee99762b0e41e78e4e6e83d8bd7fcbfe9e100661dd04cf86c26b.wav"
+  },
+  {
+    "word": "improve",
+    "meaning": "향상시키다",
+    "pos": "verb",
+    "difficulty": 10,
+    "sentence": "Practice can improve your skills.",
+    "translation": "연습은 당신의 능력을 향상시킬 수 있다.",
+    "note": "can 뒤에는 동사원형 improve를 씁니다.",
+    "audioUrl": "/audio/c939dca7b853e963b8ff3f3ea87da597df09ed244e62cee76420f4f8669611a7.wav"
+  },
+  {
+    "word": "explain",
+    "meaning": "설명하다",
+    "pos": "verb",
+    "difficulty": 11,
+    "sentence": "Can you explain this rule?",
+    "translation": "이 규칙을 설명해 줄 수 있나요?",
+    "note": "explain 뒤에 설명할 대상을 붙입니다.",
+    "audioUrl": "/audio/683e2fea225a3409218c38bd3c95dc7ce01945f8076d17fa1328f35f936c6f59.wav"
+  },
+  {
+    "word": "support",
+    "meaning": "지원하다",
+    "pos": "verb",
+    "difficulty": 12,
+    "sentence": "We support local businesses.",
+    "translation": "우리는 지역 사업체를 지원한다.",
+    "note": "support는 사람이나 활동을 돕는다는 뜻입니다.",
+    "audioUrl": "/audio/70ac2bce393ace12f6e2a9189228a3cfbdbdb43cb77a018da636192881b187be.wav"
+  },
+  {
+    "word": "compare",
+    "meaning": "비교하다",
+    "pos": "verb",
+    "difficulty": 13,
+    "sentence": "Please compare the two prices.",
+    "translation": "두 가격을 비교해 주세요.",
+    "note": "compare는 둘 이상의 공통점이나 차이를 살피는 것입니다.",
+    "audioUrl": "/audio/b6c432e0401d3acf9898b9f4973aebb0750c9219253fbed3887d2e0b71585e59.wav"
+  },
+  {
+    "word": "prepare",
+    "meaning": "준비하다",
+    "pos": "verb",
+    "difficulty": 14,
+    "sentence": "I prepare dinner every evening.",
+    "translation": "나는 매일 저녁 식사를 준비한다.",
+    "note": "prepare dinner는 저녁 식사를 준비한다는 뜻입니다.",
+    "audioUrl": "/audio/ad273f67386f0138debf1c2d2d4e5724ff94ef87c0ca22be7e31635df41e7a63.wav"
+  },
+  {
+    "word": "reduce",
+    "meaning": "줄이다",
+    "pos": "verb",
+    "difficulty": 15,
+    "sentence": "We must reduce waste.",
+    "translation": "우리는 쓰레기를 줄여야 한다.",
+    "note": "must 뒤에는 동사원형 reduce를 씁니다.",
+    "audioUrl": "/audio/1440f9a6e5a51903d483320a3af715841e4fef7521972a5c79931aac9b9ba68f.wav"
+  },
+  {
+    "word": "achieve",
+    "meaning": "달성하다",
+    "pos": "verb",
+    "difficulty": 16,
+    "sentence": "You can achieve your goals.",
+    "translation": "당신은 목표를 달성할 수 있다.",
+    "note": "achieve a goal은 목표를 달성한다는 표현입니다.",
+    "audioUrl": "/audio/66924433b6cc495253b461bf22ddfa2b116f6af72f36f6c03e7c2df8893e5e2f.wav"
+  },
+  {
+    "word": "require",
+    "meaning": "필요로 하다",
+    "pos": "verb",
+    "difficulty": 17,
+    "sentence": "These plants require sunlight.",
+    "translation": "이 식물들은 햇빛을 필요로 한다.",
+    "note": "주어 plants가 복수이므로 require를 씁니다.",
+    "audioUrl": "/audio/2fdf962eca46a902a61a7dbfe274ed0c8409acc9f8faf2eeea4ff3fc9e1329fb.wav"
+  },
+  {
+    "word": "consider",
+    "meaning": "고려하다",
+    "pos": "verb",
+    "difficulty": 18,
+    "sentence": "Please consider other options.",
+    "translation": "다른 선택지도 고려해 주세요.",
+    "note": "consider는 결정하기 전에 신중하게 생각한다는 뜻입니다.",
+    "audioUrl": "/audio/4b9be8d0a0234d2373239374be5d5daf592e7bf2f31af01b395d7003e3a80ac7.wav"
+  },
+  {
+    "word": "approach",
+    "meaning": "접근법",
+    "pos": "noun",
+    "difficulty": 20,
+    "sentence": "We need a different approach.",
+    "translation": "우리는 다른 접근법이 필요하다.",
+    "note": "여기서 approach는 문제를 다루는 방법을 뜻하는 명사입니다.",
+    "audioUrl": "/audio/15af253fd544b478dccb49322e1100c8cda6657f2178fd23d9f9c1da47a7066f.wav"
+  },
+  {
+    "word": "maintain",
+    "meaning": "유지하다",
+    "pos": "verb",
+    "difficulty": 21,
+    "sentence": "We maintain high standards.",
+    "translation": "우리는 높은 기준을 유지한다.",
+    "note": "maintain은 일정한 상태나 수준을 계속 지킨다는 뜻입니다.",
+    "audioUrl": "/audio/6abada3793dd85b402df270870882b7b7bed14a040d06f98130573212a6fa944.wav"
+  },
+  {
+    "word": "efficient",
+    "meaning": "효율적인",
+    "pos": "adjective",
+    "difficulty": 23,
+    "sentence": "This is an efficient system.",
+    "translation": "이것은 효율적인 시스템이다.",
+    "note": "efficient는 시간이나 자원을 낭비하지 않는다는 뜻입니다.",
+    "audioUrl": "/audio/d94c7e34345b77b259de2f20a216a4c8fd9631f8ae4797151a5ebfbe6b46ef9f.wav"
+  },
+  {
+    "word": "negotiate",
+    "meaning": "협상하다",
+    "pos": "verb",
+    "difficulty": 25,
+    "sentence": "They will negotiate a new contract.",
+    "translation": "그들은 새 계약을 협상할 것이다.",
+    "note": "will 뒤에는 동사원형 negotiate를 씁니다.",
+    "audioUrl": "/audio/04f3e5407b4a283e2377e26ad5fbc24fc820efba8c99b5009f734ea67a6585a2.wav"
+  },
+  {
+    "word": "inevitable",
+    "meaning": "피할 수 없는",
+    "pos": "adjective",
+    "difficulty": 27,
+    "sentence": "Some changes are inevitable.",
+    "translation": "어떤 변화는 피할 수 없다.",
+    "note": "inevitable은 반드시 일어나 피할 수 없다는 뜻입니다.",
+    "audioUrl": "/audio/4fa61f373eed265624e446104afd21765a66ecb95d4bfaa49e01a5a47ebe8ba6.wav"
+  }
+]
