@@ -69,6 +69,8 @@ for r in rows:
     m=master.get(r['item_id'])
     d={'id':r['item_id'],'word':m['lemma'] if m else r['form'],'surface':r['form'],'meaning':r['meaning_ko'],'alternative':r['meaning_ko_alt'],'note':r['usage_note_ko'],'level':r['cefr'] or '미분류','type':r['item_type'],'pos':labels.get(r['pos_or_type'],'품사 확인 필요'),'reviewed':False}
     d.update(corrections.get(r['item_id'],{}))
+    # Reviewed junk entries (letter fragments, script directions) are dropped from the deck.
+    if d.pop('exclude', False): continue
     example_id = r['item_id']
     # Reviewed headword/POS corrections must not inherit a different sense's occurrences.
     overrides = {'W-437bf7a520':('leave','VERB'), 'W-d169b6eb1a':('go','VERB'), 'W-455b4f5728':('good','ADJ')}
@@ -81,7 +83,7 @@ for r in rows:
         review = dialogue_reviews[r['item_id']]
         d['examples'] = [{**e, 'ko': review[e['sentenceId']]['ko']} for e in d['examples'] if review.get(e['sentenceId'], {}).get('sense_match') == '1']
     data.append(d)
-assert len(data)==len(rows) and len({r['id'] for r in data})==len(data)
+assert len(data)==len(rows)-sum(bool(c.get('exclude')) for c in corrections.values()) and len({r['id'] for r in data})==len(data)
 (root/'apps/mobile/src/data/hp-vocabulary.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
 print(json.dumps({'records':len(data),'changedHeadwords':sum(d['word']!=d['surface'] for d in data),'reviewedCorrections':len(corrections)},ensure_ascii=False))
 

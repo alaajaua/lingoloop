@@ -23514,5 +23514,492 @@
   },
   "W-ec520c68d9": {
     "reviewed": true
+  },
+  "W-6d40f0bd0d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-3d09b2025e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-f6193ba61b": {
+    "reviewed": true
+  },
+  "PHR-51bb71c4dc": {
+    "reviewed": true
+  },
+  "PHR-c69d0c8947": {
+    "reviewed": true
+  },
+  "PHR-c65151a312": {
+    "reviewed": true
+  },
+  "PHR-69801df2ae": {
+    "reviewed": true
+  },
+  "W-ee3b299b58": {
+    "reviewed": true
+  },
+  "PHR-edaf44a25f": {
+    "reviewed": true
+  },
+  "PHR-b0d5cead32": {
+    "reviewed": true
+  },
+  "PHR-24c0ec6c5f": {
+    "reviewed": true
+  },
+  "W-f9daa498fc": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-9de2037ead": {
+    "reviewed": true
+  },
+  "W-d61bde3d83": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-fbda618f85": {
+    "reviewed": true
+  },
+  "PHR-3ddaa116f8": {
+    "reviewed": true
+  },
+  "PHR-b59150be68": {
+    "reviewed": true
+  },
+  "PHR-6c9eb808c5": {
+    "reviewed": true
+  },
+  "W-0864b4de5c": {
+    "word": "Snape",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "PHR-efaaea5015": {
+    "reviewed": true
+  },
+  "W-9b38157c4a": {
+    "word": "o'",
+    "pos": "전치사",
+    "meaning": "~의",
+    "note": "of의 사투리 표기",
+    "reviewed": true
+  },
+  "W-08ad16a75b": {
+    "reviewed": true
+  },
+  "W-67bb4f2aee": {
+    "reviewed": true
+  },
+  "PHR-b7375ff397": {
+    "reviewed": true
+  },
+  "W-d64efb54c7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-07802a2d9a": {
+    "reviewed": true
+  },
+  "PHR-de4f7ca24c": {
+    "reviewed": true
+  },
+  "W-56f25b1370": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-eae90f2f03": {
+    "reviewed": true
+  },
+  "PHR-56ab23b012": {
+    "reviewed": true
+  },
+  "PHR-10158d086a": {
+    "reviewed": true
+  },
+  "W-e574336b85": {
+    "pos": "전치사",
+    "reviewed": true
+  },
+  "PHR-dba72fc21a": {
+    "reviewed": true
+  },
+  "W-a6785fdfff": {
+    "word": "Voldemort",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "PHR-b913b85980": {
+    "reviewed": true
+  },
+  "PHR-79074159eb": {
+    "reviewed": true
+  },
+  "W-57846527a4": {
+    "reviewed": true
+  },
+  "PHR-27f0f10720": {
+    "reviewed": true
+  },
+  "PHR-f887d1d283": {
+    "reviewed": true
+  },
+  "PHR-d53bf82d9d": {
+    "reviewed": true
+  },
+  "W-c3a35f071e": {
+    "word": "Dumbledore",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "PHR-4c64c36aeb": {
+    "reviewed": true
+  },
+  "PHR-7c10a8306a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-470f56376a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-e1337ebdf8": {
+    "reviewed": true
+  },
+  "W-fafa6fc3e8": {
+    "word": "'e",
+    "pos": "대명사",
+    "meaning": "그",
+    "note": "he의 사투리 표기",
+    "reviewed": true
+  },
+  "PHR-4dcfe05c71": {
+    "reviewed": true
+  },
+  "W-9ad91e6ccb": {
+    "reviewed": true
+  },
+  "PHR-f88811b337": {
+    "reviewed": true
+  },
+  "W-6d3e06b013": {
+    "word": "Ginny",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-c22b6e700a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-816776d80a": {
+    "reviewed": true
+  },
+  "W-a411fd58b2": {
+    "reviewed": true
+  },
+  "W-29d78673cc": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-46df2d7150": {
+    "reviewed": true
+  },
+  "PHR-10bf3131e5": {
+    "reviewed": true
+  },
+  "PHR-8f03e75801": {
+    "reviewed": true
+  },
+  "W-7950741288": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ecf3ce81d8": {
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "PHR-d340ee4669": {
+    "reviewed": true
+  },
+  "PHR-08a34d61d1": {
+    "reviewed": true
+  },
+  "W-8d6fa4c4a2": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-b1c9da129a": {
+    "reviewed": true
+  },
+  "PHR-37bb15a5e3": {
+    "reviewed": true
+  },
+  "W-a865e65b51": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-0317f2f81d": {
+    "reviewed": true
+  },
+  "PHR-9ce7834bde": {
+    "reviewed": true
+  },
+  "PHR-22a27aca81": {
+    "reviewed": true
+  },
+  "PHR-e7f2d906be": {
+    "reviewed": true
+  },
+  "PHR-bfb6eedd87": {
+    "reviewed": true
+  },
+  "PHR-7626b988c2": {
+    "reviewed": true
+  },
+  "PHR-d922bf6b64": {
+    "reviewed": true
+  },
+  "PHR-ed31668278": {
+    "reviewed": true
+  },
+  "W-bdc472f3ad": {
+    "reviewed": true
+  },
+  "PHR-6cf7186716": {
+    "reviewed": true
+  },
+  "W-cd20673ac7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-3602dd3aa8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5784d75ff5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-bc649ef05e": {
+    "reviewed": true
+  },
+  "PHR-6458196ead": {
+    "reviewed": true
+  },
+  "PHR-bcca961805": {
+    "reviewed": true
+  },
+  "PHR-f3c2e3d13b": {
+    "reviewed": true
+  },
+  "PHR-13bc786511": {
+    "reviewed": true
+  },
+  "PHR-3ab1882fac": {
+    "reviewed": true
+  },
+  "W-0f6bfa414a": {
+    "word": "'n'",
+    "reviewed": true
+  },
+  "W-f68ad900c0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-67dfdd63f4": {
+    "reviewed": true
+  },
+  "PHR-eb9e2eae03": {
+    "reviewed": true
+  },
+  "PHR-4a44d80f89": {
+    "reviewed": true
+  },
+  "PHR-0178686af5": {
+    "reviewed": true
+  },
+  "PHR-0200463809": {
+    "reviewed": true
+  },
+  "W-07c20cf7d4": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-06e6936927": {
+    "reviewed": true
+  },
+  "PHR-ba86a36359": {
+    "reviewed": true
+  },
+  "W-44285b77e9": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-0374499720": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-6a32c1381c": {
+    "reviewed": true
+  },
+  "PHR-bbd400ad74": {
+    "reviewed": true
+  },
+  "PHR-df8fe2b7ae": {
+    "reviewed": true
+  },
+  "PHR-c59e5f9aca": {
+    "reviewed": true
+  },
+  "PHR-3463afeb84": {
+    "reviewed": true
+  },
+  "PHR-e372de5bbf": {
+    "reviewed": true
+  },
+  "PHR-00c23e2477": {
+    "reviewed": true
+  },
+  "PHR-03f6b42a0c": {
+    "reviewed": true
+  },
+  "PHR-870fe9d9be": {
+    "reviewed": true
+  },
+  "W-738abc099d": {
+    "reviewed": true
+  },
+  "W-d2022990a6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-56ecde827e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-a597eda70a": {
+    "word": "Potter",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "PHR-fdfa9e7c2e": {
+    "reviewed": true
+  },
+  "PHR-b28f76890f": {
+    "reviewed": true
+  },
+  "PHR-af699ed498": {
+    "reviewed": true
+  },
+  "PHR-95e89e2576": {
+    "reviewed": true
+  },
+  "W-ab5db200b6": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-fdbab43cb3": {
+    "reviewed": true
+  },
+  "W-84312fc844": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-b1269b828b": {
+    "reviewed": true
+  },
+  "PHR-83d1aab0d1": {
+    "reviewed": true
+  },
+  "PHR-6a716176a1": {
+    "reviewed": true
+  },
+  "PHR-f9e2fa75b3": {
+    "reviewed": true
+  },
+  "PHR-e9de18cc0c": {
+    "reviewed": true
+  },
+  "PHR-0c48f5a105": {
+    "reviewed": true
+  },
+  "W-476150a423": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f53ba77810": {
+    "reviewed": true
+  },
+  "PHR-b48d8ff5c6": {
+    "reviewed": true
+  },
+  "PHR-5deabb6778": {
+    "reviewed": true
+  },
+  "W-d02dac991d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6991af685b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-48ccca6945": {
+    "reviewed": true
+  },
+  "PHR-cff883d571": {
+    "reviewed": true
+  },
+  "PHR-ca1fe61bdb": {
+    "reviewed": true
+  },
+  "PHR-b04594bbb0": {
+    "reviewed": true
+  },
+  "PHR-343e548bf0": {
+    "reviewed": true
+  },
+  "W-0d8aa0951d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5bd89a61b0": {
+    "reviewed": true
+  },
+  "W-4dafbd22b9": {
+    "reviewed": true
+  },
+  "W-be1bdd8597": {
+    "reviewed": true
+  },
+  "W-cdddee4a39": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-7a7c861be5": {
+    "reviewed": true
+  },
+  "PHR-ba1f42f4f7": {
+    "reviewed": true
+  },
+  "PHR-1870e86dc9": {
+    "reviewed": true
+  },
+  "PHR-852b978ca8": {
+    "reviewed": true
+  },
+  "PHR-a00e721842": {
+    "reviewed": true
+  },
+  "PHR-9831df335e": {
+    "reviewed": true
+  },
+  "PHR-1e5f15fc5b": {
+    "meaning": "꺼내다",
+    "alternative": "해치우다, 쓰러뜨리다",
+    "reviewed": true
   }
 }
