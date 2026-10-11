@@ -32388,5 +32388,538 @@
   },
   "PHR-126fc026af": {
     "reviewed": true
+  },
+  "PHR-aae9ba7934": {
+    "reviewed": true
+  },
+  "PHR-3410bf5a37": {
+    "reviewed": true
+  },
+  "PHR-65167c664b": {
+    "reviewed": true
+  },
+  "PHR-671dbb6eb1": {
+    "reviewed": true
+  },
+  "PHR-e2216b9bbd": {
+    "reviewed": true
+  },
+  "PHR-2b5144f942": {
+    "reviewed": true
+  },
+  "PHR-05f16aa354": {
+    "reviewed": true
+  },
+  "PHR-6debb53c87": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-f4bed976a0": {
+    "reviewed": true
+  },
+  "PHR-251bd34aea": {
+    "reviewed": true
+  },
+  "PHR-95046695e0": {
+    "reviewed": true
+  },
+  "PHR-a408ce6a03": {
+    "reviewed": true
+  },
+  "PHR-e205a34d57": {
+    "reviewed": true
+  },
+  "PHR-bff78423f8": {
+    "reviewed": true
+  },
+  "PHR-837e0d7ce7": {
+    "reviewed": true
+  },
+  "PHR-d513f9498a": {
+    "reviewed": true
+  },
+  "PHR-1a84f7399d": {
+    "reviewed": true
+  },
+  "PHR-41f130a888": {
+    "reviewed": true
+  },
+  "PHR-f0c15a89c8": {
+    "reviewed": true
+  },
+  "PHR-d1de504f35": {
+    "reviewed": true
+  },
+  "PHR-757ab51fab": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-7d0ba8d2e3": {
+    "reviewed": true
+  },
+  "PHR-55c1707caf": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-c573ca2cc2": {
+    "reviewed": true
+  },
+  "PHR-3ccfed9c2a": {
+    "reviewed": true
+  },
+  "PHR-1452a59f02": {
+    "reviewed": true
+  },
+  "PHR-aaabb9acd8": {
+    "reviewed": true
+  },
+  "PHR-0d9f607c5e": {
+    "reviewed": true
+  },
+  "PHR-4053d058c1": {
+    "reviewed": true
+  },
+  "PHR-abccd4f6fa": {
+    "reviewed": true
+  },
+  "PHR-878964ac60": {
+    "reviewed": true
+  },
+  "PHR-c16e1ab05f": {
+    "reviewed": true
+  },
+  "PHR-96ddeac983": {
+    "reviewed": true
+  },
+  "PHR-d28364a138": {
+    "reviewed": true
+  },
+  "PHR-b5337d76e1": {
+    "reviewed": true
+  },
+  "PHR-799b5d1151": {
+    "reviewed": true
+  },
+  "W-ac20dcf446": {
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "W-6ca7094e50": {
+    "reviewed": true
+  },
+  "W-f8329887e9": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-fe9a039c01": {
+    "word": "Aparecium",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-1a622f3749": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-0fad7d3265": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5a49fff186": {
+    "word": "Arresto",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-04a69e56e7": {
+    "word": "arise",
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-af4df8ec8e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4e773a28ae": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-fc0299b290": {
+    "word": "He-Who-Must-Not-Be-Named",
+    "pos": "고유명사",
+    "note": "볼드모트",
+    "reviewed": true
+  },
+  "W-5a43a8a7f3": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-02c8c789ff": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b58caa60b3": {
+    "reviewed": true
+  },
+  "W-75574fd1c0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5bb8ff2244": {
+    "word": "bloodstained",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-2457a915ef": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-e915785ea8": {
+    "reviewed": true
+  },
+  "W-4214aa7e8b": {
+    "reviewed": true
+  },
+  "W-17e79b6ea9": {
+    "reviewed": true
+  },
+  "W-229d678a0a": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-3356dce4eb": {
+    "word": "Colloportus",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-afe5319eff": {
+    "word": "Cruciatus",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-c42a6b1589": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-7af90d17a8": {
+    "reviewed": true
+  },
+  "W-b71b466575": {
+    "word": "daisy",
+    "note": "",
+    "reviewed": true
+  },
+  "W-d72421279e": {
+    "reviewed": true
+  },
+  "W-dddca17e30": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-dcb8786ddf": {
+    "word": "discordant",
+    "note": "",
+    "reviewed": true
+  },
+  "W-208c5f78d0": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-8b4502d70c": {
+    "reviewed": true
+  },
+  "W-74010f3451": {
+    "word": "dumb down",
+    "pos": "구동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-8c863d1aa7": {
+    "word": "echo",
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-223c03c2f9": {
+    "reviewed": true
+  },
+  "W-46bb1fb038": {
+    "word": "everlasting",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-7b9b2cb311": {
+    "word": "ex-Auror",
+    "reviewed": true
+  },
+  "W-1c3e381dd2": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-197b9a57b3": {
+    "reviewed": true
+  },
+  "W-46757efaeb": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-65d5ba147d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c36498346f": {
+    "reviewed": true
+  },
+  "W-7452fdbafb": {
+    "reviewed": true
+  },
+  "W-ae9fefeb42": {
+    "word": "Flobberworm",
+    "reviewed": true
+  },
+  "W-19e2934caf": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-141ece5550": {
+    "reviewed": true
+  },
+  "W-bc0aefe170": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-25755aaa9d": {
+    "reviewed": true
+  },
+  "W-05ba07b12e": {
+    "word": "gramophone",
+    "reviewed": true
+  },
+  "W-f6fe214c72": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-08a85265e4": {
+    "reviewed": true
+  },
+  "W-64170ce3f0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-60ee0009ab": {
+    "word": "Gubraithian",
+    "reviewed": true
+  },
+  "W-c3227ed410": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-e936954649": {
+    "reviewed": true
+  },
+  "W-54b2274c21": {
+    "reviewed": true
+  },
+  "W-f0e2b9b78a": {
+    "word": "Herbology",
+    "reviewed": true
+  },
+  "W-9e76f35063": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-0384bb0798": {
+    "reviewed": true
+  },
+  "W-551a6e5ba1": {
+    "reviewed": true
+  },
+  "W-9e14908583": {
+    "word": "hurricane",
+    "note": "",
+    "reviewed": true
+  },
+  "W-a2516069bd": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-525e170e6a": {
+    "reviewed": true
+  },
+  "W-25a1074966": {
+    "reviewed": true
+  },
+  "W-4990668d0c": {
+    "word": "Keeper",
+    "reviewed": true
+  },
+  "W-5ecafe5fb5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-7aeb490e22": {
+    "reviewed": true
+  },
+  "W-a118980ade": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5fb65638fc": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-3f16a3b2ef": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-632373b806": {
+    "word": "Legilimens",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-41cd0a1d6e": {
+    "reviewed": true
+  },
+  "W-0a87c071f2": {
+    "reviewed": true
+  },
+  "W-f904812f82": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-dc9e577949": {
+    "word": "low-ceilinged",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-5f47a19388": {
+    "reviewed": true
+  },
+  "W-df9adf3578": {
+    "reviewed": true
+  },
+  "W-63a0b5e03a": {
+    "word": "Mermish",
+    "reviewed": true
+  },
+  "W-a968b06743": {
+    "reviewed": true
+  },
+  "W-c47b548205": {
+    "reviewed": true
+  },
+  "W-a55d5a92b4": {
+    "reviewed": true
+  },
+  "W-9ae64f8a2c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d64329ec77": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-1f9d10a33a": {
+    "reviewed": true
+  },
+  "W-563ed21eda": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b2602cfbca": {
+    "reviewed": true
+  },
+  "W-e6a4703a6f": {
+    "pos": "부사",
+    "meaning": "저기, ~너머",
+    "reviewed": true
+  },
+  "W-60933e6840": {
+    "reviewed": true
+  },
+  "W-69ddf6c418": {
+    "reviewed": true
+  },
+  "W-11001c225a": {
+    "reviewed": true
+  },
+  "W-8ed194de6b": {
+    "reviewed": true
+  },
+  "W-b1befa19c7": {
+    "reviewed": true
+  },
+  "W-006074e577": {
+    "reviewed": true
+  },
+  "W-77939e512b": {
+    "pos": "고정 표현",
+    "reviewed": true
+  },
+  "W-e5a4b834f1": {
+    "pos": "고정 표현",
+    "reviewed": true
+  },
+  "W-1414081230": {
+    "pos": "동사",
+    "reviewed": true
+  },
+  "W-0de96872ff": {
+    "reviewed": true
+  },
+  "W-351ece2ff8": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4e1579e3da": {
+    "pos": "고정 표현",
+    "reviewed": true
+  },
+  "W-8cfb4b49d8": {
+    "word": "'tis",
+    "pos": "고정 표현",
+    "reviewed": true
+  },
+  "W-9476c40f44": {
+    "word": "Transfiguration",
+    "reviewed": true
+  },
+  "W-762fe9f4b8": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-385dcb89f5": {
+    "reviewed": true
+  },
+  "W-d91de54eed": {
+    "reviewed": true
+  },
+  "W-4f9f5b5e49": {
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "W-ae669f8bfb": {
+    "reviewed": true
+  },
+  "W-2ccbf161fd": {
+    "reviewed": true
+  },
+  "W-eb2f7bb251": {
+    "pos": "감탄사",
+    "reviewed": true
+  },
+  "W-ae25bb7d2c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5675dbc999": {
+    "pos": "고정 표현",
+    "reviewed": true
+  },
+  "W-9fe9430bd5": {
+    "exclude": true,
+    "reviewed": true
   }
 }
