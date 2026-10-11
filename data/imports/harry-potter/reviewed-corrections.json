@@ -24966,5 +24966,514 @@
   },
   "PHR-537407e397": {
     "reviewed": true
+  },
+  "PHR-aa6ba7ec1a": {
+    "reviewed": true
+  },
+  "PHR-687210abb5": {
+    "reviewed": true
+  },
+  "PHR-ae1577471e": {
+    "reviewed": true
+  },
+  "PHR-1fd71251ac": {
+    "reviewed": true
+  },
+  "PHR-8e6ad09705": {
+    "reviewed": true
+  },
+  "PHR-568b452602": {
+    "reviewed": true
+  },
+  "PHR-0c05fd7cb9": {
+    "reviewed": true
+  },
+  "PHR-006a41db75": {
+    "reviewed": true
+  },
+  "PHR-e47c27115f": {
+    "reviewed": true
+  },
+  "W-07dcc25069": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-fc47299247": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-575d416fad": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b4015d6480": {
+    "reviewed": true
+  },
+  "W-7f3938c407": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-dfca88ccbb": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c6eb264fc0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ead80bb2e9": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-6bc6f548d5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-3f18b3fcb8": {
+    "reviewed": true
+  },
+  "W-9bf2ec6b2a": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-ced7181524": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c0eae34042": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f8823f5c4b": {
+    "pos": "동사",
+    "meaning": "달아나다",
+    "reviewed": true
+  },
+  "W-ec555c31c2": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-58aef3617a": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-d3c57ec847": {
+    "reviewed": true
+  },
+  "W-2b048de84a": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-99530a56a6": {
+    "reviewed": true
+  },
+  "W-94ea074d76": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-06e07b055e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-fdd2582dbe": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-08e7875002": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6f1ee2bbd7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9d4d055a49": {
+    "reviewed": true
+  },
+  "W-eb17e29f6a": {
+    "word": "no matter",
+    "pos": "고정 표현",
+    "note": "",
+    "reviewed": true
+  },
+  "W-7e6ba8ea0f": {
+    "reviewed": true
+  },
+  "W-5930cf5b65": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-4e11ad3170": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-8e8d316b70": {
+    "reviewed": true
+  },
+  "W-d73fbff2c8": {
+    "reviewed": true
+  },
+  "W-5d6b928a03": {
+    "reviewed": true
+  },
+  "W-0311ce11c1": {
+    "word": "rage",
+    "meaning": "맹위를 떨치다",
+    "alternative": "분노",
+    "note": "",
+    "reviewed": true
+  },
+  "W-2dbf8a11ad": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-0a3347aa0b": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-deb77a47ff": {
+    "reviewed": true
+  },
+  "W-7630d6f2e1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-14a109ba83": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c1962638a0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-40e3d72bf4": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-858aaad1f3": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-8b8f355bdb": {
+    "reviewed": true
+  },
+  "PHR-4261288379": {
+    "reviewed": true
+  },
+  "PHR-195a55f8ba": {
+    "reviewed": true
+  },
+  "PHR-fbb88e4d98": {
+    "reviewed": true
+  },
+  "PHR-50b33d3692": {
+    "reviewed": true
+  },
+  "PHR-947aaa66e3": {
+    "reviewed": true
+  },
+  "PHR-529d126ff6": {
+    "reviewed": true
+  },
+  "PHR-750e586382": {
+    "reviewed": true
+  },
+  "PHR-2187ac230b": {
+    "reviewed": true
+  },
+  "PHR-1d2b26c752": {
+    "reviewed": true
+  },
+  "PHR-c408d0de45": {
+    "reviewed": true
+  },
+  "PHR-9e5cf5bda0": {
+    "reviewed": true
+  },
+  "PHR-6f342e643b": {
+    "reviewed": true
+  },
+  "PHR-e33ed18fc7": {
+    "reviewed": true
+  },
+  "PHR-9c054ae83f": {
+    "reviewed": true
+  },
+  "PHR-7820ddf46b": {
+    "reviewed": true
+  },
+  "PHR-133b9800d4": {
+    "reviewed": true
+  },
+  "PHR-dd35530a4f": {
+    "reviewed": true
+  },
+  "PHR-b0328b1fe5": {
+    "reviewed": true
+  },
+  "PHR-d51cd00b45": {
+    "reviewed": true
+  },
+  "PHR-c6aaa54ffb": {
+    "reviewed": true
+  },
+  "PHR-19c2ff7c21": {
+    "reviewed": true
+  },
+  "PHR-beb8a2431a": {
+    "reviewed": true
+  },
+  "PHR-cec5ad1f44": {
+    "reviewed": true
+  },
+  "PHR-1b8c01e84d": {
+    "reviewed": true
+  },
+  "PHR-7c08e93c88": {
+    "reviewed": true
+  },
+  "PHR-d67f109ea2": {
+    "reviewed": true
+  },
+  "PHR-d3d9b4440b": {
+    "reviewed": true
+  },
+  "PHR-6bf96dcb8d": {
+    "reviewed": true
+  },
+  "PHR-1cd0e6fca0": {
+    "reviewed": true
+  },
+  "PHR-bfd90b7d59": {
+    "reviewed": true
+  },
+  "PHR-a4bb305523": {
+    "reviewed": true
+  },
+  "PHR-c2e0e8dac5": {
+    "reviewed": true
+  },
+  "PHR-8904d40849": {
+    "reviewed": true
+  },
+  "PHR-834b494ce9": {
+    "reviewed": true
+  },
+  "PHR-7da7b25d0b": {
+    "reviewed": true
+  },
+  "PHR-90c8d0b42c": {
+    "reviewed": true
+  },
+  "PHR-d591c0fa73": {
+    "reviewed": true
+  },
+  "PHR-dc59485c14": {
+    "reviewed": true
+  },
+  "PHR-7c41ea097f": {
+    "reviewed": true
+  },
+  "PHR-401a0af7a5": {
+    "reviewed": true
+  },
+  "PHR-f3d0538a60": {
+    "reviewed": true
+  },
+  "PHR-c7110852bd": {
+    "reviewed": true
+  },
+  "PHR-adf20f644b": {
+    "reviewed": true
+  },
+  "W-0585e9fb43": {
+    "reviewed": true
+  },
+  "W-742eb14648": {
+    "reviewed": true
+  },
+  "W-7dd11a51e3": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-1935d5ccac": {
+    "pos": "전치사",
+    "reviewed": true
+  },
+  "W-6057820ed1": {
+    "reviewed": true
+  },
+  "W-2e0abc253d": {
+    "reviewed": true
+  },
+  "W-5b1fbea876": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-1a98a74d77": {
+    "reviewed": true
+  },
+  "W-0f6ccad967": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-721cb038ac": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-af6d650bc5": {
+    "reviewed": true
+  },
+  "W-8855b9fad5": {
+    "reviewed": true
+  },
+  "W-6f83c2be52": {
+    "word": "Gurg",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-5d3e9181cb": {
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "W-b128e90c65": {
+    "word": "Hogsmeade",
+    "pos": "고유명사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-4971fd47ee": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-801709b4e9": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-0c7636f4b1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-58b720d91c": {
+    "reviewed": true
+  },
+  "W-5fd4999144": {
+    "reviewed": true
+  },
+  "W-55d1e03c8e": {
+    "reviewed": true
+  },
+  "W-4f5e35895c": {
+    "word": "ol'",
+    "reviewed": true
+  },
+  "W-abe6cd6d69": {
+    "reviewed": true
+  },
+  "W-fd96812922": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-79175c957f": {
+    "word": "righ'",
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-ed3aa788cf": {
+    "word": "scare",
+    "meaning": "겁주다",
+    "alternative": "",
+    "note": "",
+    "reviewed": true
+  },
+  "W-28d8c28de0": {
+    "reviewed": true
+  },
+  "W-359bcb54f1": {
+    "reviewed": true
+  },
+  "W-5e991dcd11": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-93a289bd6b": {
+    "reviewed": true
+  },
+  "W-1c7bc2defe": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-9a37664bcf": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-cdd8705ffd": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b3b2edfe52": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d65a16c16b": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-a689006dcc": {
+    "word": "wha'",
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "W-7f24604739": {
+    "reviewed": true
+  },
+  "W-06f1b358cd": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-564bc65f3a": {
+    "reviewed": true
+  },
+  "PHR-751644e39f": {
+    "reviewed": true
+  },
+  "PHR-4a1c31bf81": {
+    "reviewed": true
+  },
+  "PHR-86c32087a2": {
+    "reviewed": true
+  },
+  "PHR-6af9792338": {
+    "reviewed": true
+  },
+  "PHR-f3c401a25e": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-db206cd6d7": {
+    "reviewed": true
+  },
+  "PHR-397b5815fe": {
+    "reviewed": true
+  },
+  "PHR-454064f79b": {
+    "reviewed": true
+  },
+  "PHR-1a84a57aa2": {
+    "reviewed": true
+  },
+  "PHR-d2163328f6": {
+    "reviewed": true
+  },
+  "PHR-fc59de24be": {
+    "reviewed": true
+  },
+  "PHR-7202942ed9": {
+    "reviewed": true
   }
 }
