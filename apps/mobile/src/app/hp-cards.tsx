@@ -101,7 +101,7 @@ export default function HpCards() {
           <View style={{flexDirection:"row", flexWrap:"wrap", gap:8}}>{["전체","A1","A2","B1","B2","C1","C2","미분류"].map((v) => <Chip key={v} label={v} selected={level === v} onPress={() => setLevel(v)} />)}</View>
           <View style={{flexDirection:"row", flexWrap:"wrap", gap:8}}>{[["전체","모두"],["word","단어"],["phrase","구문"]].map(([v,label]) => <Chip key={v} label={label!} selected={kind === v} onPress={() => setKind(v!)} />)}</View>
           <Chip label="대사가 있는 어휘만" selected={dialogueOnly} onPress={() => setDialogueOnly(!dialogueOnly)} />
-          <Copy>A2 단어는 뜻과 대사 검토를 마쳤어요. 다른 난이도는 원본 자료 기준이며 검토 중입니다.</Copy>
+          <Copy>모든 난이도의 뜻과 대사 검토를 마쳤어요. 대사는 카드 뜻과 맞는 것만 한국어 번역과 함께 보여 드려요.</Copy>
           {Object.keys(progress).length > 0 && <Pressable accessibilityRole="button" onPress={resetProgress}><Text style={{color:"#9A3B3B",paddingVertical:10}}>학습 기록 지우기</Text></Pressable>}
         </>}
       </View>
