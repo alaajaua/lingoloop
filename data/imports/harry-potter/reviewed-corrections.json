@@ -24485,5 +24485,486 @@
   },
   "PHR-5305bb6bce": {
     "reviewed": true
+  },
+  "PHR-bcd0f99004": {
+    "reviewed": true
+  },
+  "PHR-472b1a466b": {
+    "reviewed": true
+  },
+  "PHR-d9342de6b1": {
+    "reviewed": true
+  },
+  "PHR-26becb8eff": {
+    "reviewed": true
+  },
+  "PHR-1c23391a02": {
+    "reviewed": true
+  },
+  "PHR-6f2babd4d3": {
+    "reviewed": true
+  },
+  "PHR-56381a022b": {
+    "reviewed": true
+  },
+  "W-dba2e1edaf": {
+    "reviewed": true
+  },
+  "W-3e5d1614a0": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-324895422d": {
+    "reviewed": true
+  },
+  "W-47d01b08e2": {
+    "reviewed": true
+  },
+  "W-106074e30c": {
+    "reviewed": true
+  },
+  "W-63aa2a1bc6": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-198d00329e": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-6e4eafb332": {
+    "word": "shine",
+    "meaning": "빛나다",
+    "alternative": "",
+    "note": "",
+    "reviewed": true
+  },
+  "PHR-f57bcda92f": {
+    "reviewed": true
+  },
+  "PHR-e8d7777955": {
+    "reviewed": true
+  },
+  "PHR-e473d0218c": {
+    "reviewed": true
+  },
+  "PHR-e7cd4678e1": {
+    "reviewed": true
+  },
+  "PHR-ecf262d809": {
+    "reviewed": true
+  },
+  "PHR-fd4281a371": {
+    "reviewed": true
+  },
+  "PHR-0adf69b229": {
+    "reviewed": true
+  },
+  "PHR-339d95693a": {
+    "reviewed": true
+  },
+  "PHR-2aa3cdd215": {
+    "reviewed": true
+  },
+  "PHR-d2dcab76e2": {
+    "reviewed": true
+  },
+  "PHR-8f89688749": {
+    "reviewed": true
+  },
+  "PHR-bf7c73c72b": {
+    "reviewed": true
+  },
+  "PHR-7e223d193b": {
+    "reviewed": true
+  },
+  "PHR-3f04e8dea1": {
+    "reviewed": true
+  },
+  "PHR-4306e9df70": {
+    "reviewed": true
+  },
+  "PHR-a214d222e8": {
+    "reviewed": true
+  },
+  "PHR-3716aaff0d": {
+    "reviewed": true
+  },
+  "PHR-8479d1d12d": {
+    "reviewed": true
+  },
+  "PHR-ca464d3cca": {
+    "reviewed": true
+  },
+  "PHR-ef041df923": {
+    "reviewed": true
+  },
+  "PHR-722f1e099f": {
+    "reviewed": true
+  },
+  "PHR-ca7dda9ee0": {
+    "reviewed": true
+  },
+  "PHR-55ffb816cd": {
+    "reviewed": true
+  },
+  "PHR-1142449d2e": {
+    "reviewed": true
+  },
+  "PHR-95983749cf": {
+    "reviewed": true
+  },
+  "PHR-c5ed541cfa": {
+    "reviewed": true
+  },
+  "PHR-19a590e38b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-c223b7a660": {
+    "pos": "접속사",
+    "reviewed": true
+  },
+  "W-1ba9b16652": {
+    "reviewed": true
+  },
+  "W-8153fd9306": {
+    "reviewed": true
+  },
+  "W-e7ee887e19": {
+    "reviewed": true
+  },
+  "W-c7f948454b": {
+    "reviewed": true
+  },
+  "W-204f991728": {
+    "reviewed": true
+  },
+  "W-018898d9d9": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6a78964398": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-2311c3c1b9": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-e22d130e1a": {
+    "reviewed": true
+  },
+  "W-09d1ac018f": {
+    "reviewed": true
+  },
+  "W-9a57332b7e": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-f9385d5d1d": {
+    "reviewed": true
+  },
+  "W-d46962c390": {
+    "pos": "부사",
+    "reviewed": true
+  },
+  "W-9de493ddc6": {
+    "pos": "대명사",
+    "meaning": "내 것",
+    "alternative": "광산",
+    "reviewed": true
+  },
+  "W-b3e425aff9": {
+    "reviewed": true
+  },
+  "W-d89f088139": {
+    "reviewed": true
+  },
+  "W-62f2d11dd9": {
+    "reviewed": true
+  },
+  "W-1627b4c605": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-b6875a3387": {
+    "reviewed": true
+  },
+  "W-231a3e63be": {
+    "reviewed": true
+  },
+  "W-88ccc9a577": {
+    "reviewed": true
+  },
+  "W-f691481ced": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-1500c82ba2": {
+    "reviewed": true
+  },
+  "PHR-33e8ae59c9": {
+    "reviewed": true
+  },
+  "PHR-d4375affca": {
+    "reviewed": true
+  },
+  "PHR-311cd141da": {
+    "reviewed": true
+  },
+  "PHR-5e4c607d12": {
+    "reviewed": true
+  },
+  "PHR-3e325ff934": {
+    "reviewed": true
+  },
+  "PHR-4da41f36f9": {
+    "reviewed": true
+  },
+  "PHR-bd5f3ba28d": {
+    "reviewed": true
+  },
+  "PHR-88c190392e": {
+    "reviewed": true
+  },
+  "PHR-944c6b00eb": {
+    "reviewed": true
+  },
+  "PHR-974819e95c": {
+    "reviewed": true
+  },
+  "PHR-75d89cccf8": {
+    "reviewed": true
+  },
+  "PHR-03b4f04923": {
+    "reviewed": true
+  },
+  "PHR-96f9efe65f": {
+    "reviewed": true
+  },
+  "PHR-e53639b79a": {
+    "reviewed": true
+  },
+  "PHR-7831cf7fae": {
+    "reviewed": true
+  },
+  "PHR-a757c3c4f2": {
+    "reviewed": true
+  },
+  "PHR-c7a4efca55": {
+    "reviewed": true
+  },
+  "PHR-dc5a34e0e2": {
+    "reviewed": true
+  },
+  "PHR-48369965de": {
+    "reviewed": true
+  },
+  "PHR-bad0fc0540": {
+    "reviewed": true
+  },
+  "PHR-935cc812d8": {
+    "reviewed": true
+  },
+  "PHR-38a42dede7": {
+    "reviewed": true
+  },
+  "PHR-e8f3000d7f": {
+    "reviewed": true
+  },
+  "PHR-4d562c6b5b": {
+    "reviewed": true
+  },
+  "W-a0f09747c8": {
+    "reviewed": true
+  },
+  "W-1990d086a3": {
+    "reviewed": true
+  },
+  "W-e79b0c57c7": {
+    "word": "'arry",
+    "reviewed": true
+  },
+  "W-ba700ab2cf": {
+    "reviewed": true
+  },
+  "W-dca8828582": {
+    "reviewed": true
+  },
+  "W-95d934213d": {
+    "reviewed": true
+  },
+  "W-7ce09048a0": {
+    "pos": "명사",
+    "meaning": "성",
+    "reviewed": true
+  },
+  "W-04c9d070ea": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-286c835c20": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-00b198317b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-82b271ac80": {
+    "word": "Molly",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-869b1f5ed8": {
+    "word": "Mudblood",
+    "reviewed": true
+  },
+  "W-40c41be08e": {
+    "pos": "한정사",
+    "meaning": "어떤 ~도 아닌",
+    "reviewed": true
+  },
+  "W-4aa984537d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-9334b66809": {
+    "reviewed": true
+  },
+  "W-e9d8ee6268": {
+    "reviewed": true
+  },
+  "W-6c5e29834c": {
+    "word": "righ'",
+    "reviewed": true
+  },
+  "W-5f946b02d9": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f1f03938d3": {
+    "reviewed": true
+  },
+  "W-2bc22148bf": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-515a1eb399": {
+    "word": "wizarding",
+    "pos": "형용사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-3b88021638": {
+    "word": "Wormtail",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-4c0f457529": {
+    "pos": "대명사",
+    "reviewed": true
+  },
+  "W-0385c2a251": {
+    "word": "You-Know-Who",
+    "reviewed": true
+  },
+  "PHR-d7ffbba558": {
+    "reviewed": true
+  },
+  "PHR-723f9bf0be": {
+    "reviewed": true
+  },
+  "PHR-a8a93f6cf9": {
+    "reviewed": true
+  },
+  "PHR-a5c3eb1e5c": {
+    "reviewed": true
+  },
+  "PHR-88febedeb8": {
+    "reviewed": true
+  },
+  "PHR-dfd6ad538f": {
+    "reviewed": true
+  },
+  "PHR-007353a71e": {
+    "reviewed": true
+  },
+  "PHR-e798bae97e": {
+    "reviewed": true
+  },
+  "PHR-37234c1eb5": {
+    "reviewed": true
+  },
+  "PHR-fb8edb2f74": {
+    "reviewed": true
+  },
+  "PHR-3e4710c6a2": {
+    "reviewed": true
+  },
+  "PHR-68abe87162": {
+    "reviewed": true
+  },
+  "PHR-30f0bf6c2d": {
+    "reviewed": true
+  },
+  "PHR-99c4e50060": {
+    "reviewed": true
+  },
+  "PHR-0565fcdbbc": {
+    "reviewed": true
+  },
+  "PHR-c480b6f777": {
+    "reviewed": true
+  },
+  "PHR-8bced75dec": {
+    "reviewed": true
+  },
+  "PHR-b0341e67af": {
+    "reviewed": true
+  },
+  "PHR-148eff935d": {
+    "reviewed": true
+  },
+  "PHR-9d1b817448": {
+    "reviewed": true
+  },
+  "PHR-a1399e1266": {
+    "reviewed": true
+  },
+  "PHR-085a53514b": {
+    "reviewed": true
+  },
+  "PHR-123eecf0fd": {
+    "reviewed": true
+  },
+  "PHR-df257c2b7f": {
+    "reviewed": true
+  },
+  "PHR-ab7a97667e": {
+    "reviewed": true
+  },
+  "PHR-b4cc9ee882": {
+    "reviewed": true
+  },
+  "PHR-9b780c2504": {
+    "reviewed": true
+  },
+  "PHR-49d47b2109": {
+    "reviewed": true
+  },
+  "PHR-390f0fa8f4": {
+    "reviewed": true
+  },
+  "PHR-6b878dbf28": {
+    "reviewed": true
+  },
+  "PHR-537407e397": {
+    "reviewed": true
   }
 }
