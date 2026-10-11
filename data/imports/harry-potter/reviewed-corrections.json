@@ -26943,5 +26943,484 @@
   },
   "PHR-7b6b8d8a08": {
     "reviewed": true
+  },
+  "PHR-9f0ddb8981": {
+    "reviewed": true
+  },
+  "PHR-392132aea8": {
+    "reviewed": true
+  },
+  "PHR-03cadc9b18": {
+    "reviewed": true
+  },
+  "PHR-1e6cf963a3": {
+    "reviewed": true
+  },
+  "PHR-8225d02906": {
+    "reviewed": true
+  },
+  "PHR-985645485d": {
+    "reviewed": true
+  },
+  "PHR-a600551f9b": {
+    "reviewed": true
+  },
+  "PHR-eaa6686b17": {
+    "reviewed": true
+  },
+  "PHR-0d07e51ac3": {
+    "reviewed": true
+  },
+  "PHR-6b36684105": {
+    "reviewed": true
+  },
+  "PHR-9da9c699a3": {
+    "reviewed": true
+  },
+  "PHR-5243c6a980": {
+    "reviewed": true
+  },
+  "PHR-96169e3e08": {
+    "reviewed": true
+  },
+  "PHR-2402a4a570": {
+    "reviewed": true
+  },
+  "PHR-7bf2d08e63": {
+    "reviewed": true
+  },
+  "PHR-ae4096faf7": {
+    "reviewed": true
+  },
+  "PHR-1ae1f07bdb": {
+    "reviewed": true
+  },
+  "PHR-40c77bbc28": {
+    "reviewed": true
+  },
+  "PHR-b4b516ae69": {
+    "reviewed": true
+  },
+  "PHR-c6dae5ccf5": {
+    "reviewed": true
+  },
+  "PHR-677ace6f8f": {
+    "reviewed": true
+  },
+  "PHR-aec9ecf4b1": {
+    "reviewed": true
+  },
+  "PHR-a43a5aac8f": {
+    "reviewed": true
+  },
+  "PHR-f1b89cbf2e": {
+    "reviewed": true
+  },
+  "PHR-502601e968": {
+    "reviewed": true
+  },
+  "PHR-347fdc9ac8": {
+    "reviewed": true
+  },
+  "PHR-d5927d6085": {
+    "reviewed": true
+  },
+  "PHR-b234191a8f": {
+    "reviewed": true
+  },
+  "PHR-a337390aac": {
+    "reviewed": true
+  },
+  "PHR-4e8712ac41": {
+    "reviewed": true
+  },
+  "PHR-1bb77857e8": {
+    "reviewed": true
+  },
+  "PHR-9fab070d98": {
+    "reviewed": true
+  },
+  "PHR-5f36469fe8": {
+    "reviewed": true
+  },
+  "PHR-6612458d87": {
+    "reviewed": true
+  },
+  "PHR-f528bb3b42": {
+    "reviewed": true
+  },
+  "PHR-4dbc52d723": {
+    "reviewed": true
+  },
+  "PHR-83e8cbff90": {
+    "reviewed": true
+  },
+  "PHR-35b6d2f70d": {
+    "reviewed": true
+  },
+  "PHR-555c405544": {
+    "reviewed": true
+  },
+  "PHR-f7acbb437d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-5c0b4d3bb6": {
+    "reviewed": true
+  },
+  "PHR-2457b514a1": {
+    "reviewed": true
+  },
+  "PHR-f0b5b28a73": {
+    "reviewed": true
+  },
+  "PHR-afcb3dc729": {
+    "reviewed": true
+  },
+  "PHR-cde70900ec": {
+    "reviewed": true
+  },
+  "PHR-53a59a0ccb": {
+    "reviewed": true
+  },
+  "PHR-b77f9a6f27": {
+    "reviewed": true
+  },
+  "PHR-0b2da34c4a": {
+    "reviewed": true
+  },
+  "PHR-9202aa9d9b": {
+    "reviewed": true
+  },
+  "PHR-ecedd03f76": {
+    "reviewed": true
+  },
+  "PHR-f2ab084649": {
+    "reviewed": true
+  },
+  "PHR-c73cdbefd5": {
+    "reviewed": true
+  },
+  "PHR-bdc6e2e8ab": {
+    "reviewed": true
+  },
+  "PHR-d74c9f8085": {
+    "reviewed": true
+  },
+  "PHR-9af7527d8e": {
+    "reviewed": true
+  },
+  "PHR-9c306c7fee": {
+    "reviewed": true
+  },
+  "PHR-f81eaf563c": {
+    "reviewed": true
+  },
+  "PHR-a01dc11162": {
+    "reviewed": true
+  },
+  "PHR-7e9b720c0e": {
+    "reviewed": true
+  },
+  "PHR-250d8c3f46": {
+    "reviewed": true
+  },
+  "PHR-a79fe1229c": {
+    "reviewed": true
+  },
+  "PHR-cc859fc02c": {
+    "reviewed": true
+  },
+  "PHR-43a41afee0": {
+    "reviewed": true
+  },
+  "PHR-81df62dc74": {
+    "reviewed": true
+  },
+  "PHR-60865eb395": {
+    "reviewed": true
+  },
+  "PHR-b9034b0194": {
+    "reviewed": true
+  },
+  "PHR-748d7f5295": {
+    "reviewed": true
+  },
+  "PHR-e7235a54cb": {
+    "reviewed": true
+  },
+  "PHR-fc12166da5": {
+    "reviewed": true
+  },
+  "PHR-0fa979524d": {
+    "reviewed": true
+  },
+  "PHR-7934247d6b": {
+    "reviewed": true
+  },
+  "PHR-09d393731d": {
+    "reviewed": true
+  },
+  "PHR-538a4a2de9": {
+    "reviewed": true
+  },
+  "PHR-2194153e54": {
+    "reviewed": true
+  },
+  "PHR-91625b858e": {
+    "reviewed": true
+  },
+  "PHR-f015cda677": {
+    "reviewed": true
+  },
+  "PHR-911595e2ce": {
+    "reviewed": true
+  },
+  "PHR-be6a086e65": {
+    "reviewed": true
+  },
+  "PHR-309ac298d0": {
+    "reviewed": true
+  },
+  "PHR-7326702511": {
+    "reviewed": true
+  },
+  "PHR-2c4d580ed6": {
+    "reviewed": true
+  },
+  "PHR-f997dcaba1": {
+    "reviewed": true
+  },
+  "PHR-36d4ebec5c": {
+    "reviewed": true
+  },
+  "PHR-fa8505bcbc": {
+    "reviewed": true
+  },
+  "PHR-83f2802880": {
+    "reviewed": true
+  },
+  "PHR-db5408de87": {
+    "reviewed": true
+  },
+  "PHR-1b08af43be": {
+    "reviewed": true
+  },
+  "PHR-9d093fc5e5": {
+    "reviewed": true
+  },
+  "PHR-a674857f85": {
+    "reviewed": true
+  },
+  "PHR-a05c380b49": {
+    "reviewed": true
+  },
+  "PHR-c2eba2a911": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "PHR-c9a8f1d400": {
+    "reviewed": true
+  },
+  "PHR-040cb44fa0": {
+    "reviewed": true
+  },
+  "PHR-36c0d1af3d": {
+    "reviewed": true
+  },
+  "PHR-d3bc37090f": {
+    "reviewed": true
+  },
+  "PHR-cd12eb3aa2": {
+    "reviewed": true
+  },
+  "PHR-a4032d8250": {
+    "reviewed": true
+  },
+  "PHR-2b14032c95": {
+    "reviewed": true
+  },
+  "W-a2c8ed91b5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-93ebaba249": {
+    "reviewed": true
+  },
+  "W-309176f44c": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6578e335bc": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-d2ef0a8921": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-f55ab6aa01": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-5e610bfd29": {
+    "reviewed": true
+  },
+  "W-dedb92ab2d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-63aafbe86e": {
+    "word": "Barty",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-bfd45417c1": {
+    "word": "bathe",
+    "meaning": "(빛 등에) 휩싸이다",
+    "alternative": "목욕하다",
+    "reviewed": true
+  },
+  "W-1fa64c12e1": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ec993cf3ae": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-61a43f6aa2": {
+    "reviewed": true
+  },
+  "W-db86d838b4": {
+    "reviewed": true
+  },
+  "W-464165ae8c": {
+    "reviewed": true
+  },
+  "W-4166566aeb": {
+    "reviewed": true
+  },
+  "W-9dd9f1c20b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-bb6870b898": {
+    "reviewed": true
+  },
+  "W-6d30f8c953": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-6ff4497894": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-b5e007d99d": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-b2bf5c3ee5": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-8684e34a3d": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-65fb8c28ff": {
+    "reviewed": true
+  },
+  "W-08cd48443c": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-6314ab8136": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-4e81745370": {
+    "reviewed": true
+  },
+  "W-b88a78d1fe": {
+    "pos": "형용사",
+    "reviewed": true
+  },
+  "W-9aa6543cce": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-32fdd9c29a": {
+    "reviewed": true
+  },
+  "W-9ff414cd5f": {
+    "word": "Disapparate",
+    "reviewed": true
+  },
+  "W-2748e29d26": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-ab702a72a3": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-7d7f7fd75f": {
+    "word": "Dudley",
+    "pos": "고유명사",
+    "reviewed": true
+  },
+  "W-70686d7a41": {
+    "word": "Dungbomb",
+    "reviewed": true
+  },
+  "W-3186c41931": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-cc330ac133": {
+    "pos": "명사",
+    "reviewed": true
+  },
+  "W-4e5e70e778": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-9d99cb520c": {
+    "pos": "동사",
+    "note": "",
+    "reviewed": true
+  },
+  "W-0db67437cd": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-62810455c7": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-389bfc5578": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-dcd61e7876": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-668680f33a": {
+    "reviewed": true
+  },
+  "W-c1a694279b": {
+    "exclude": true,
+    "reviewed": true
+  },
+  "W-68172056a8": {
+    "reviewed": true
+  },
+  "W-cffc913e16": {
+    "reviewed": true
   }
 }
