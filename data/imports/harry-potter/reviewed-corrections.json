@@ -20,7 +20,7 @@
     "pos": "동사",
     "meaning": "떠나다, 출발하다",
     "alternative": "남기다; 두고 가다",
-    "note": "제공된 예문에서는 약 10분 뒤 출발한다는 뜻입니다. leaves는 명사 leaf(나뭇잎)의 복수형일 수도 있어 문맥을 구분해야 합니다.",
+    "note": "",
     "reviewed": true
   },
   "W-455b4f5728": {
@@ -4904,6 +4904,369 @@
     "reviewed": true
   },
   "W-70910b1263": {
+    "reviewed": true
+  },
+  "W-525eef9512": {
+    "reviewed": true
+  },
+  "W-5771fedb0f": {
+    "reviewed": true
+  },
+  "W-81ca708ad8": {
+    "reviewed": true
+  },
+  "W-77eaf24a16": {
+    "reviewed": true
+  },
+  "W-f131b5cd6f": {
+    "reviewed": true
+  },
+  "W-1dc2e3d96a": {
+    "reviewed": true
+  },
+  "W-3d5b9eabcf": {
+    "reviewed": true
+  },
+  "W-6ad1c8bb78": {
+    "reviewed": true
+  },
+  "W-002adb7183": {
+    "reviewed": true
+  },
+  "W-e8103c240a": {
+    "reviewed": true
+  },
+  "W-0ab4eb72c7": {
+    "reviewed": true
+  },
+  "W-f2d7fd2f68": {
+    "reviewed": true
+  },
+  "W-e892256f76": {
+    "reviewed": true
+  },
+  "W-cd56785ac3": {
+    "reviewed": true
+  },
+  "W-8becf3e940": {
+    "reviewed": true
+  },
+  "W-0d72da873f": {
+    "reviewed": true
+  },
+  "W-6aad81d99e": {
+    "reviewed": true
+  },
+  "W-df9cf12c11": {
+    "reviewed": true
+  },
+  "W-03d29b7eeb": {
+    "reviewed": true
+  },
+  "W-d1111fdf70": {
+    "reviewed": true
+  },
+  "W-c70e1ac9b7": {
+    "reviewed": true
+  },
+  "W-0c3c9ac02b": {
+    "reviewed": true
+  },
+  "W-c06411d162": {
+    "reviewed": true
+  },
+  "W-034d24aa9f": {
+    "reviewed": true
+  },
+  "W-1f3cd61e03": {
+    "reviewed": true
+  },
+  "W-b49bcba54d": {
+    "reviewed": true
+  },
+  "W-c0bd778417": {
+    "reviewed": true
+  },
+  "W-99ecd16ae1": {
+    "reviewed": true
+  },
+  "W-7630f45493": {
+    "reviewed": true
+  },
+  "W-6964003d48": {
+    "reviewed": true
+  },
+  "W-d54fa2aff2": {
+    "reviewed": true
+  },
+  "W-1d5373a387": {
+    "reviewed": true
+  },
+  "W-90361a28a7": {
+    "reviewed": true
+  },
+  "W-df0f9f4dde": {
+    "reviewed": true
+  },
+  "W-2dfd606a42": {
+    "reviewed": true
+  },
+  "W-3628545cba": {
+    "reviewed": true
+  },
+  "W-b3c1b8e144": {
+    "reviewed": true
+  },
+  "W-1813b5b5e2": {
+    "reviewed": true
+  },
+  "W-639fd334df": {
+    "reviewed": true
+  },
+  "W-646a272eb9": {
+    "reviewed": true
+  },
+  "W-4a5a8cd4da": {
+    "reviewed": true
+  },
+  "W-888ff56a87": {
+    "reviewed": true
+  },
+  "W-f8f5adc8db": {
+    "reviewed": true
+  },
+  "W-1d004277d9": {
+    "reviewed": true
+  },
+  "W-f1f836b351": {
+    "reviewed": true
+  },
+  "W-ebdcf62bcd": {
+    "reviewed": true
+  },
+  "W-c9d65e678d": {
+    "reviewed": true
+  },
+  "W-9ebe41b759": {
+    "reviewed": true
+  },
+  "W-1a69dde2bd": {
+    "reviewed": true
+  },
+  "W-0659ae34bb": {
+    "reviewed": true
+  },
+  "W-cdfb919d68": {
+    "reviewed": true
+  },
+  "W-28637189f4": {
+    "reviewed": true
+  },
+  "W-f4192e0354": {
+    "reviewed": true
+  },
+  "W-1d4087428b": {
+    "reviewed": true
+  },
+  "W-b93fee2891": {
+    "reviewed": true
+  },
+  "W-c3ec11d0c8": {
+    "reviewed": true
+  },
+  "W-04d4871477": {
+    "reviewed": true
+  },
+  "W-9768456179": {
+    "reviewed": true
+  },
+  "W-50113221a0": {
+    "reviewed": true
+  },
+  "W-5c4b1b41de": {
+    "reviewed": true
+  },
+  "W-875bf7422d": {
+    "reviewed": true
+  },
+  "W-bc0ae723aa": {
+    "reviewed": true
+  },
+  "W-f14b57fbf0": {
+    "reviewed": true
+  },
+  "W-59f1dea9d9": {
+    "reviewed": true
+  },
+  "W-b52408e8dd": {
+    "reviewed": true
+  },
+  "W-f7a44727a0": {
+    "reviewed": true
+  },
+  "W-a5b64c703e": {
+    "reviewed": true
+  },
+  "W-1f74f6fd49": {
+    "reviewed": true
+  },
+  "W-a40c9d5a74": {
+    "reviewed": true
+  },
+  "W-924081ea7e": {
+    "reviewed": true
+  },
+  "W-7250cfdfa2": {
+    "reviewed": true
+  },
+  "W-7eb3f20afa": {
+    "reviewed": true
+  },
+  "W-13ae2cf5ae": {
+    "reviewed": true
+  },
+  "W-6f6ec4ae7e": {
+    "reviewed": true
+  },
+  "W-d524d271eb": {
+    "reviewed": true
+  },
+  "W-f714f7362b": {
+    "reviewed": true
+  },
+  "W-781ba2afdc": {
+    "reviewed": true
+  },
+  "W-48b1efebdd": {
+    "reviewed": true
+  },
+  "W-9d290fbf78": {
+    "reviewed": true
+  },
+  "W-f7e7f81bb3": {
+    "reviewed": true
+  },
+  "W-22e6f1419f": {
+    "reviewed": true
+  },
+  "W-2762b65cea": {
+    "reviewed": true
+  },
+  "W-725153a073": {
+    "reviewed": true
+  },
+  "W-5da501f2e4": {
+    "reviewed": true
+  },
+  "W-a7e85884b2": {
+    "reviewed": true
+  },
+  "W-1ee2f1d633": {
+    "reviewed": true
+  },
+  "W-38fe3cfdf5": {
+    "reviewed": true
+  },
+  "W-1abc8872ce": {
+    "reviewed": true
+  },
+  "W-adc0e854f4": {
+    "reviewed": true
+  },
+  "W-a464f0d7e8": {
+    "reviewed": true
+  },
+  "W-6ad1fa1163": {
+    "reviewed": true
+  },
+  "W-2db581998f": {
+    "reviewed": true
+  },
+  "W-c392bfaf9d": {
+    "reviewed": true
+  },
+  "W-2285909e4c": {
+    "reviewed": true
+  },
+  "W-048329af30": {
+    "reviewed": true
+  },
+  "W-2f6fa1a5c5": {
+    "reviewed": true
+  },
+  "W-d0673bb348": {
+    "reviewed": true
+  },
+  "W-8345a7f1ab": {
+    "reviewed": true
+  },
+  "W-c637a4074e": {
+    "reviewed": true
+  },
+  "W-3ddbb0145e": {
+    "reviewed": true
+  },
+  "W-388ac463c2": {
+    "reviewed": true
+  },
+  "W-15220e0586": {
+    "reviewed": true
+  },
+  "W-0471bf1bf6": {
+    "reviewed": true
+  },
+  "W-c380e198a3": {
+    "reviewed": true
+  },
+  "W-25341c112b": {
+    "reviewed": true
+  },
+  "W-a189b885ff": {
+    "reviewed": true
+  },
+  "W-b9d6ad2411": {
+    "reviewed": true
+  },
+  "W-6bd525ddd9": {
+    "reviewed": true
+  },
+  "W-89eef67b8f": {
+    "reviewed": true
+  },
+  "W-e66425d153": {
+    "reviewed": true
+  },
+  "W-76c3864d36": {
+    "reviewed": true
+  },
+  "W-24d1fb79c0": {
+    "reviewed": true
+  },
+  "W-20cb881ee5": {
+    "reviewed": true
+  },
+  "W-e87077f88a": {
+    "reviewed": true
+  },
+  "W-e4a0880c12": {
+    "reviewed": true
+  },
+  "W-7ac9d69555": {
+    "reviewed": true
+  },
+  "W-561fb5dd55": {
+    "reviewed": true
+  },
+  "W-c0da70f344": {
+    "reviewed": true
+  },
+  "W-aef8c0db9a": {
+    "reviewed": true
+  },
+  "W-2cb094dd5d": {
+    "reviewed": true
+  },
+  "W-d2ff2df153": {
     "reviewed": true
   }
 }
