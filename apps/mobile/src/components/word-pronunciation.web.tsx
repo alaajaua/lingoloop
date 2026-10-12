@@ -3,8 +3,26 @@ import { Pressable, Text, View } from "react-native";
 import { Copy } from "./auth-ui";
 import { DevicePronunciation } from "./device-pronunciation";
 type Recording = { audio: string; text?: string; sourceUrl?: string; license?: { name: string; url: string } };
-const cache = new Map<string, Recording>();
+// Shared requests let the next card's lookup start before it is shown.
+const requests = new Map<string, Promise<Recording | undefined>>();
 const safeUrl = (value?: string) => value?.startsWith("https://") ? value : undefined;
+// A slash indicates alternative headwords, not text to pronounce literally.
+const toLookup = (word: string) => word.split(" / ")[0]!.trim().toLowerCase();
+function request(lookup: string) {
+  let pending = requests.get(lookup);
+  if (!pending) {
+    pending = fetch(`/pronunciation/lookup/${encodeURIComponent(lookup)}`).then(async (response) => {
+      if (!response.ok) throw new Error("unavailable");
+      const entries = await response.json() as { phonetics?: Recording[] }[];
+      const options = entries.flatMap((e) => e.phonetics ?? []).filter((p) => safeUrl(p.audio));
+      return options.find((p) => /-uk\.mp3/.test(p.audio)) ?? options[0];
+    });
+    requests.set(lookup, pending);
+    pending.catch(() => requests.delete(lookup));
+  }
+  return pending;
+}
+export function prefetchPronunciation(word: string) { request(toLookup(word)).catch(() => undefined); }
 export function WordPronunciation({ word }: { word: string }) {
   const [recording, setRecording] = useState<Recording | null>(null);
   const [status, setStatus] = useState("loading");
@@ -12,31 +30,20 @@ export function WordPronunciation({ word }: { word: string }) {
   const [device, setDevice] = useState(false);
   const [retry, setRetry] = useState(0);
   const audio = useRef<HTMLAudioElement>(null);
-  // A slash indicates alternative headwords, not text to pronounce literally.
-  const lookup = word.split(" / ")[0]!.trim().toLowerCase();
+  const lookup = toLookup(word);
   useEffect(() => {
     setRecording(null); setPlaying(false); setDevice(false); setStatus("loading");
-    const controller = new AbortController();
     let active = true;
-    const timer = setTimeout(() => controller.abort(), 7000);
-    async function load() {
-      try {
-        let found = cache.get(lookup);
-        if (!found) {
-          const response = await fetch(`/pronunciation/lookup/${encodeURIComponent(lookup)}`, { signal: controller.signal });
-          if (!response.ok) throw new Error("unavailable");
-          const entries = await response.json() as { phonetics?: Recording[] }[];
-          const options = entries.flatMap((e) => e.phonetics ?? []).filter((p) => safeUrl(p.audio));
-          found = options.find((p) => /-uk\.mp3/.test(p.audio)) ?? options[0];
-          if (found) cache.set(lookup, found);
-        }
-        if (active) { setRecording(found ?? null); setStatus(found ? "ready" : "missing"); }
-      } catch { if (active) setStatus("unavailable"); }
-      finally { clearTimeout(timer); }
-    }
-    void load();
+    // A retry asks again even when the earlier answer had no recording.
+    if (retry) requests.delete(lookup);
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    const timeout = new Promise<never>((_, reject) => { timer = setTimeout(() => reject(new Error("timeout")), 7000); });
+    Promise.race([request(lookup), timeout])
+      .then((found) => { if (active) { setRecording(found ?? null); setStatus(found ? "ready" : "missing"); } })
+      .catch(() => { if (active) setStatus("unavailable"); })
+      .finally(() => clearTimeout(timer));
     const player = audio.current;
-    return () => { active = false; clearTimeout(timer); controller.abort(); player?.pause(); };
+    return () => { active = false; clearTimeout(timer); player?.pause(); };
   }, [lookup, retry]);
   function play() {
     const player = audio.current;
@@ -59,10 +66,11 @@ export function WordPronunciation({ word }: { word: string }) {
     </View>
     <audio ref={audio} src={recording?.sourceUrl?.match(/^https:\/\/commons\.wikimedia\.org\/w\/index\.php\?curid=(\d+)$/)?.[1] ? `/pronunciation/commons/${new URL(recording.sourceUrl).searchParams.get("curid")}` : recording?.audio.replace("https://api.dictionaryapi.dev/media/pronunciations/en/", "/pronunciation/audio/")} preload="none" onEnded={() => setPlaying(false)} onError={() => { setPlaying(false); setStatus("error"); }} />
     {status === "error" && <Copy error>음성을 불러오지 못했어요. 스피커를 눌러 다시 시도해 주세요.</Copy>}
-    {recording && <div style={{ fontSize: 11, color: "#62708A" }}>
-      <a href={safeUrl(recording.sourceUrl) ?? "https://dictionaryapi.dev/"} target="_blank" rel="noreferrer">음성 출처</a>
+    {recording && <details style={{ fontSize: 11, color: "#62708A" }}>
+      <summary style={{ cursor: "pointer" }}>음성 출처</summary>
+      <a href={safeUrl(recording.sourceUrl) ?? "https://dictionaryapi.dev/"} target="_blank" rel="noreferrer">원본 보기</a>
       {safeUrl(recording.license?.url) && <> / <a href={recording.license!.url} target="_blank" rel="noreferrer">{recording.license!.name}</a></>}
-    </div>}
+    </details>}
     {(status === "missing" || status === "unavailable") && <Pressable accessibilityRole="button" onPress={() => setRetry(retry + 1)}><Copy>음성 다시 확인</Copy></Pressable>}
     {(status === "missing" || status === "unavailable" || status === "error") && !device && <Pressable accessibilityRole="button" onPress={() => setDevice(true)}><Copy>대신 기기 음성 사용</Copy></Pressable>}
     {device && <DevicePronunciation word={lookup} />}
