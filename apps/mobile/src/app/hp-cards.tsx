@@ -1,5 +1,5 @@
 import { WordPronunciation } from "../components/word-pronunciation";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Platform, Pressable, Text, View } from "react-native";
 import { router } from "expo-router";
 import vocabulary from "../data/hp-vocabulary.json";
@@ -14,7 +14,7 @@ const shortPos: Record<string, string> = {
 const compactPos = (pos: string) => pos.split(/\s*\/\s*/).map((part) => shortPos[part] ?? part).join("/");
 const storageKey = "lingoloop.hp-cards.v1";
 const progressKey = "lingoloop.hp-cards.progress.v1";
-type Round = { dialogueOnly?: boolean; level?: string; kind?: string; queue: string[]; cursor: number; count: number; remembered: number; missed?: string[] };
+type Round = { mode?: "recall" | "quiz"; dialogueOnly?: boolean; level?: string; kind?: string; queue: string[]; cursor: number; count: number; remembered: number; missed?: string[] };
 function shuffle(ids: string[]) {
   const out = [...ids];
   for (let i = out.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [out[i], out[j]] = [out[j]!, out[i]!]; }
@@ -23,6 +23,8 @@ function shuffle(ids: string[]) {
 export default function HpCards() {
   const [level, setLevel] = useState("A2");
   const [kind, setKind] = useState("word");
+  const [mode, setMode] = useState<"recall" | "quiz">("quiz");
+  const [answer, setAnswer] = useState<string | null>(null);
   const [settings, setSettings] = useState(false);
   const [paused, setPaused] = useState(false);
   const [dialogueOnly, setDialogueOnly] = useState(true);
@@ -39,7 +41,7 @@ export default function HpCards() {
       const raw = localStorage.getItem(storageKey);
       if (raw) {
         const r = JSON.parse(raw) as Round;
-        if (Array.isArray(r.queue) && r.queue.length <= 10000 && r.queue.every((id) => byId.has(id)) && Number.isInteger(r.cursor) && r.cursor >= 0 && r.cursor <= r.queue.length && Number.isInteger(r.count) && r.count > 0 && r.count <= 10 && Number.isInteger(r.remembered) && r.remembered >= 0 && r.remembered <= r.count && (r.missed ?? []).every((id) => byId.has(id))) { setRound(r); setDialogueOnly(r.dialogueOnly ?? false); if (["전체","A1","A2","B1","B2","C1","C2","미분류"].includes(r.level ?? "")) setLevel(r.level!); if (["전체","word","phrase"].includes(r.kind ?? "")) setKind(r.kind!); }
+        if (Array.isArray(r.queue) && r.queue.length <= 10000 && r.queue.every((id) => byId.has(id)) && Number.isInteger(r.cursor) && r.cursor >= 0 && r.cursor <= r.queue.length && Number.isInteger(r.count) && r.count > 0 && r.count <= 10 && Number.isInteger(r.remembered) && r.remembered >= 0 && r.remembered <= r.count && (r.missed ?? []).every((id) => byId.has(id))) { setRound(r); setMode(r.mode === "quiz" ? "quiz" : "recall"); setDialogueOnly(r.dialogueOnly ?? false); if (["전체","A1","A2","B1","B2","C1","C2","미분류"].includes(r.level ?? "")) setLevel(r.level!); if (["전체","word","phrase"].includes(r.kind ?? "")) setKind(r.kind!); }
       }
     } catch { setStorageError(true); }
     setReady(true);
@@ -61,8 +63,8 @@ export default function HpCards() {
   const learningCount = poolIds.filter((id) => progress[id] && !progress[id].known).length;
   const nextDue = Math.min(...poolIds.map((id) => progress[id]).filter((p) => p && !p.known).map((p) => p!.due));
   function begin(queue: string[]) {
-    setRound({ dialogueOnly, level, kind, queue, count: queue.length, cursor: 0, remembered: 0, missed: [] });
-    setRevealed(false); setExamplesOpen(false); setPaused(false);
+    setRound({ mode, dialogueOnly, level, kind, queue, count: queue.length, cursor: 0, remembered: 0, missed: [] });
+    setRevealed(false); setAnswer(null); setExamplesOpen(false); setPaused(false);
   }
   const start = () => begin(nextQueue(progress, poolIds, Date.now(), 10, shuffle));
   function grade(result: "known" | "remembered" | "forgot") {
@@ -73,13 +75,27 @@ export default function HpCards() {
     if (result === "forgot" || !missed.includes(id)) setProgress((p) => record(p, id, result, Date.now()));
     const forgot = result === "forgot";
     setRound({ ...round, queue: forgot ? [...round.queue, id] : round.queue, cursor: round.cursor + 1, remembered: round.remembered + Number(!forgot), missed: forgot && !missed.includes(id) ? [...missed, id] : missed });
-    setRevealed(false); setExamplesOpen(false); setPaused(false);
+    setRevealed(false); setAnswer(null); setExamplesOpen(false); setPaused(false);
   }
   function resetProgress() {
     if (Platform.OS === "web" && !window.confirm("이 기기에 저장된 해리포터 카드 학습 기록을 모두 지울까요?")) return;
     setProgress({}); setRound(null);
   }
   const card = round ? byId.get(round.queue[round.cursor] ?? "") : null;
+  const quiz = round?.mode === "quiz";
+  const options = useMemo(() => {
+    if (!card) return [];
+    const parts = (s: string) => s.split(/[,;/()]/).map((v) => v.trim()).filter(Boolean);
+    const meanings = parts(card.meaning + "," + card.alternative);
+    const candidates = vocabulary.filter((w) => w.id !== card.id && w.word !== card.word && w.pos === card.pos && w.type === card.type && !parts(w.meaning + "," + w.alternative).some((v) => meanings.some((m) => v.includes(m) || m.includes(v))));
+    const picked = [card.meaning];
+    for (const id of shuffle(candidates.map((w) => w.id))) {
+      const meaning = byId.get(id)!.meaning;
+      if (!picked.includes(meaning)) picked.push(meaning);
+      if (picked.length === 4) break;
+    }
+    return shuffle(picked);
+  }, [card]);
   const movieNames: Record<string, string> = { HP01:"마법사의 돌", HP02:"비밀의 방", HP03:"아즈카반의 죄수", HP04:"불의 잔", HP05:"불사조 기사단", HP06:"혼혈 왕자", HP07:"죽음의 성물 1", HP08:"죽음의 성물 2" };
   return <Screen>
     <Text style={{ color: "#536585", fontSize: 14, fontWeight: "700", letterSpacing: 1 }}>LingoLoop / HARRY POTTER</Text>
@@ -87,6 +103,10 @@ export default function HpCards() {
       <Heading>대사 속 단어를
 내 단어로</Heading>
       <Copy>10개씩 가볍게. 뜻을 떠올리고, 해리포터 대사에서 다시 만나 보세요.</Copy>
+      <View style={{flexDirection:"row",gap:8}}>
+        <Chip label="뜻 고르기" selected={mode === "quiz"} onPress={() => setMode("quiz")} />
+        <Chip label="암기 카드" selected={mode === "recall"} onPress={() => setMode("recall")} />
+      </View>
       {paused && round && <Button title={`이어서 암기하기 (${round.remembered}/${round.count})`} onPress={() => setPaused(false)} />}
       <View style={[styles.card, { backgroundColor: "#F1F4FC" }]}>
         <Text style={{ fontSize: 17, fontWeight: "700", color: "#253656" }}>{level === "A2" ? "기초 A2" : level} / {kind === "word" ? "단어" : kind === "phrase" ? "구문" : "단어와 구문"}</Text>
@@ -124,16 +144,22 @@ export default function HpCards() {
           {!!card.alternative && <Text style={{fontSize:14,lineHeight:21,color:"#62708A"}}>{card.alternative}</Text>}
           {!!card.note && <Text style={{fontSize:13,lineHeight:20,color:"#69758A"}}>{card.note}</Text>}
           {!card.reviewed && <Text style={{fontSize:12,color:"#69758A"}}>원본 뜻 / 정확성 검토 중</Text>}
-        </> : <Copy>어떤 뜻인지 떠올려 보세요.</Copy>}
+        </> : <Copy>{quiz ? "알맞은 뜻을 골라 보세요." : "어떤 뜻인지 떠올려 보세요."}</Copy>}
       </View>
-      {!revealed ? <>
+      {!revealed && quiz ? <View style={{gap:10}}>
+        {options.map((option) => <Button key={option} secondary title={option} onPress={() => { if (answer !== null) return; setAnswer(option); setRevealed(true); }} />)}
+        <Button secondary title="모르겠어요" onPress={() => {setAnswer("");setRevealed(true);}} />
+      </View> : !revealed ? <>
         <Button title="뜻 확인하기" onPress={() => setRevealed(true)} />
         <Button secondary title="이미 아는 단어예요" onPress={() => grade("known")} />
       </> : <>
-        <View style={{flexDirection:"row",gap:10}}>
+        {quiz ? <>
+          <Copy>{answer === card.meaning ? "정답이에요!" : `정답은 ‘${card.meaning}’이에요. 다시 연습할게요.`}</Copy>
+          <Button title="다음 단어" onPress={() => grade(answer === card.meaning ? "remembered" : "forgot")} />
+        </> : <View style={{flexDirection:"row",gap:10}}>
           <View style={{flex:1}}><Button secondary title="다시 연습" onPress={() => grade("forgot")} /></View>
           <View style={{flex:1}}><Button title="기억했어요" onPress={() => grade("remembered")} /></View>
-        </View>
+        </View>}
         <View style={{gap:16}}>
           <Text style={{fontSize:17,fontWeight:"700",color:"#253656",paddingTop:12}}>대사로 기억하기</Text>
           {card.examples.length ? <>
@@ -141,7 +167,7 @@ export default function HpCards() {
             {(examplesOpen ? card.examples : card.examples.slice(0, 1)).map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
               <Text style={{fontSize:17,lineHeight:27,color:"#253656"}}>{highlight(e.text,e.surface)}</Text>
               {!!translation(e) && <Text style={{fontSize:15,lineHeight:23,color:"#45526B"}}>{translation(e)}</Text>}
-              <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker} / 대본 {e.page}쪽</Text>
+              <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker}</Text>
             </View>)}
             {card.examples.length > 1 && <Pressable accessibilityRole="button" accessibilityState={{expanded:examplesOpen}} onPress={() => setExamplesOpen(!examplesOpen)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>{examplesOpen ? "대사 접기 −" : `다른 대사 ${card.examples.length - 1}개 더 보기 +`}</Text></Pressable>}
             <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{card.examples.every((e) => !!translation(e)) ? "제공된 대본에서 고른 대사로, 단어가 이 뜻으로 쓰였는지와 해석을 검수했어요. 영화의 최종 대사와 다를 수 있어요." : "제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요."}</Text>

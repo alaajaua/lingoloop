@@ -295,3 +295,13 @@ C1(카드 420여 개)과 C2(카드 370여 개)도 검수했습니다. 누적 7,7
 `hosting/hp-cards`에 새 단독 모드 빌드(entry-d843217f…)를 반영했습니다. Sites 재배포는 아직 하지 않았습니다.
 
 남은 일: 음성 라이선스 문구 정리, 다음 카드 음성 미리 불러오기.
+
+## 2026-10-12: 선택형 뜻 퀴즈 및 기존 Site 재배포
+
+hp-cards에 뜻 고르기/암기 카드 모드를 추가하고 회차에 모드를 저장합니다. 같은 품사/유형의 뜻을 선택지로 구성하며, 동일 기본형/동일 뜻과 주요 뜻 또는 추가 뜻의 문자열 겹침을 제외합니다. 정답 공개 후 다음 단어를 누르면 기존 remembered/forgot 학습 기록과 반복 큐에 반영합니다. 의미적으로 유사한 오답까지 자동 보장하지 않으므로 전체 어휘의 선택지 검수는 남아 있습니다. 대사 출처의 페이지 표기는 UI에서 제거하고 원본 데이터에는 유지합니다.
+
+타입 검사, 해당 화면 lint, Expo 웹 export 통과. 브라우저에서 type 정답 선택, er 모르겠어요 피드백, 다음 카드 및 진행률 확인. 기존 복습/번역 데이터와 브라우저 저장을 유지했습니다. 화면 examples/hp-choice-quiz.png.
+
+기존 hosting/hp-cards의 source helper 열기가 빈 체크아웃을 요구하여 hosting/hp-cards-live에 동일 Site의 원격 소스를 열었습니다. 새 Site를 만들지 않았으며 이후 배포 소스는 hosting/hp-cards-live를 사용합니다. 기존 소스 폴더는 보존했습니다.
+
+재배포 성공: project appgprj_6acb9013ea908191bc2d34d53dc9d2b5, commit 5945e42fd24ad1e9caa74bd77c7b0a949007a82e, deployment appgdep_6acc92a7315c81918480308704cda4ce succeeded. 고정 주소 https://lingoloop-hp-cards.sone8056.chatgpt.site/hp-cards . 기존 본인 전용 접근 유지. 실제 원격 로그인 이후의 휴대폰 조작은 사용자 확인 필요.
