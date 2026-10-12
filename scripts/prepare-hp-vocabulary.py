@@ -50,8 +50,13 @@ for o in csv.DictReader((source/'word_occurrences.csv').open(encoding='utf-8-sig
     for ident in word_keys.get((o['lemma'].casefold(),o['pos']),[]): add(ident,o)
 for o in csv.DictReader((source/'phrase_occurrences.csv').open(encoding='utf-8-sig')):
     if o['review_required'] == 'false': add(o['phrase_id'],o)
-def select_examples(ident):
-    options = sorted(candidates[ident].values(), key=lambda e:(abs(len(e['text'].split())-10),len(e['text']),e['sentenceId']))
+# Manual review per card: sense_match 0 drops a line whose use differs from the card's meaning (set store by); ko is the Korean translation.
+reviews = {(r['card_id'], r['sentence_id']): r for r in csv.DictReader((source/'reviewed-dialogue.tsv').open(encoding='utf-8'), delimiter='\t', quoting=csv.QUOTE_NONE)}
+def select_examples(ident, card_id):
+    options = [dict(e, **({'ko': reviews[(card_id, e['sentenceId'])]['ko']} if (card_id, e['sentenceId']) in reviews else {}))
+               for e in candidates[ident].values() if reviews.get((card_id, e['sentenceId']), {}).get('sense_match') != '0']
+    # Reviewed lines first so a dropped line is replaced without reshuffling the ones already checked.
+    options.sort(key=lambda e:('ko' not in e, abs(len(e['text'].split())-10), len(e['text']), e['sentenceId']))
     selected=[]
     # Prefer distinct movies before filling remaining slots with readable dialogue.
     for e in options:
@@ -72,10 +77,10 @@ for r in rows:
     if example_id in overrides:
         matches = word_keys.get(overrides[example_id], [])
         example_id = matches[0] if matches else ''
-    d['examples']=select_examples(example_id)
+    d['examples']=select_examples(example_id, r['item_id'])
     data.append(d)
 assert len(data)==len(rows) and len({r['id'] for r in data})==len(data)
 (root/'apps/mobile/src/data/hp-vocabulary.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
 print(json.dumps({'records':len(data),'changedHeadwords':sum(d['word']!=d['surface'] for d in data),'reviewedCorrections':len(corrections)},ensure_ascii=False))
 
-print(json.dumps({'withDialogue':sum(bool(d['examples']) for d in data),'withFour':sum(len(d['examples'])==4 for d in data)}))
+print(json.dumps({'withDialogue':sum(bool(d['examples']) for d in data),'withFour':sum(len(d['examples'])==4 for d in data),'translated':sum('ko' in e for d in data for e in d['examples'])}))

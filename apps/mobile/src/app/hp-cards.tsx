@@ -135,14 +135,17 @@ export default function HpCards() {
           <View style={{flex:1}}><Button title="기억했어요" onPress={() => grade("remembered")} /></View>
         </View>
         <View style={{gap:16}}>
-          <Pressable accessibilityRole="button" accessibilityState={{expanded:examplesOpen}} onPress={() => setExamplesOpen(!examplesOpen)}><Text style={{fontSize:17,fontWeight:"700",color:"#253656",paddingVertical:12}}>대사로 기억하기 {card.examples.length ? `(${card.examples.length})` : ""} {examplesOpen ? "−" : "+"}</Text></Pressable>
-          {examplesOpen && (card.examples.length ? <>
-            {card.examples.map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
+          <Text style={{fontSize:17,fontWeight:"700",color:"#253656",paddingTop:12}}>대사로 기억하기</Text>
+          {card.examples.length ? <>
+            {/* The first line stays open so the dialogue is seen without an extra tap; the rest are optional. */}
+            {(examplesOpen ? card.examples : card.examples.slice(0, 1)).map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
               <Text style={{fontSize:17,lineHeight:27,color:"#253656"}}>{highlight(e.text,e.surface)}</Text>
+              {!!translation(e) && <Text style={{fontSize:15,lineHeight:23,color:"#45526B"}}>{translation(e)}</Text>}
               <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker} / 대본 {e.page}쪽</Text>
             </View>)}
-            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요.</Text>
-          </> : <Copy>읽기 좋은 대사를 아직 찾지 못했어요. 확인되지 않은 문장은 넣지 않았습니다.</Copy>)}
+            {card.examples.length > 1 && <Pressable accessibilityRole="button" accessibilityState={{expanded:examplesOpen}} onPress={() => setExamplesOpen(!examplesOpen)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>{examplesOpen ? "대사 접기 −" : `다른 대사 ${card.examples.length - 1}개 더 보기 +`}</Text></Pressable>}
+            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{card.examples.every((e) => !!translation(e)) ? "제공된 대본에서 고른 대사로, 단어가 이 뜻으로 쓰였는지와 해석을 검수했어요. 영화의 최종 대사와 다를 수 있어요." : "제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요."}</Text>
+          </> : <Copy>읽기 좋은 대사를 아직 찾지 못했어요. 확인되지 않은 문장은 넣지 않았습니다.</Copy>}
         </View>
       </>}
     </> : <>
@@ -161,6 +164,10 @@ export default function HpCards() {
     </>}
     {storageError && <Copy error>진행을 저장하지 못했어요. 새로고침하면 이번 회차가 사라질 수 있어요.</Copy>}
   </Screen>;
+}
+// Only reviewed lines carry a Korean translation in the generated JSON.
+function translation(example: object) {
+  return "ko" in example && typeof example.ko === "string" ? example.ko : "";
 }
 function formatDue(due: number) {
   const days = Math.ceil((due - Date.now()) / (24 * 60 * 60 * 1000));
