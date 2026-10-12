@@ -282,4 +282,16 @@ C1(카드 420여 개)과 C2(카드 370여 개)도 검수했습니다. 누적 7,7
 
 `hosting/hp-cards`에 새 단독 모드 빌드(entry-face5c3b…)를 반영했습니다. Sites 재배포는 아직 하지 않았습니다.
 
-남은 일: 카드 뜻·품사 자체의 사전 검수(위처럼 표제어가 깨진 카드 정리), 음성 라이선스 문구 정리, 다음 카드 음성 미리 불러오기.
+### 카드 뜻·품사 검수 완료
+
+원본 카드 10,583장 전부의 표제어·품사·뜻·보조 뜻·메모를 검수했습니다. 판정은 `data/imports/harry-potter/reviewed-cards.tsv`에 카드마다 한 줄로 남깁니다. `ok`는 원본 확인, `fix`는 비어 있지 않은 칸만 덮어쓰기(`-`는 그 칸을 비움), `drop`은 덱에서 제외입니다. `scripts/prepare-hp-vocabulary.py`가 이 파일을 읽어 반영하고, 검수한 카드에는 `reviewed: true`가 붙어 "원본 뜻 / 정확성 검토 중" 표시가 사라집니다.
+
+- 유지 9,035장, 수정 1,121장, 제외 427장. 앱 카드 수는 10,156장입니다.
+- 수정에서 가장 많았던 것은 보조 뜻에 다른 품사의 뜻이 섞인 경우입니다(예: `book` 명사의 "예약하다", `clean` 형용사의 "청소하다"). 해당 품사의 뜻만 남기거나 비웠습니다.
+- 품사 오류(`gorgeous` 명사→형용사, `ha-ha-ha` 동사→감탄사 등), 잘못 분리된 표제어(`clothe`→`clothes`, `heartstre`→`heartstring`, `wizarde`→`wizarding`, `quise`→`guise`), 대문자 표제어(`EAR-splitting`→`ear-splitting`), 소문자 인명(`dumbledore`→`Dumbledore`)을 고쳤습니다.
+- 제외한 것은 OCR 글자 조각(`b`, `j`, `es`, `abou`, `anda`), 같은 단어의 잘못된 품사 중복(`didn't` 동사, `and` 명사, `Hogwarts` 소문자·대문자 중복), 대본 지시어(`camera pulls back`, `pan to`, `EXT.`, `POV`, `wide shot`)입니다.
+- 진행 기록은 덱에 있는 카드만 대상으로 계산하므로, 제외된 카드 기록은 자동으로 무시됩니다.
+
+`hosting/hp-cards`에 새 단독 모드 빌드(entry-d843217f…)를 반영했습니다. Sites 재배포는 아직 하지 않았습니다.
+
+남은 일: 음성 라이선스 문구 정리, 다음 카드 음성 미리 불러오기.

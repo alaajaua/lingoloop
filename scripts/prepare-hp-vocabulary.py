@@ -10,6 +10,8 @@ rows = list(csv.DictReader((source / 'hp_vocab_app.csv').open(encoding='utf-8-si
 master = {r['word_id']: r for r in csv.DictReader((source / 'words_master.csv').open(encoding='utf-8-sig'))}
 labels = {'NOUN':'명사','VERB':'동사','ADJ':'형용사','ADV':'부사','PRON':'대명사','PROPN':'고유명사','ADP':'전치사','INTJ':'감탄사','NUM':'수사','AUX':'조동사','SCONJ':'종속접속사','DET':'한정사','CCONJ':'등위접속사','PART':'불변화사','PUNCT':'문장부호','X':'품사 확인 필요','phrasal_verb':'구동사','collocation':'연어','fixed_expression':'고정 표현','conversational_chunk':'회화 표현','british_expression':'영국식 표현','idiom':'관용구','discourse_marker':'담화 표현','other_mwe':'복합 표현','slang':'속어'}
 corrections = json.loads((source / 'reviewed-corrections.json').read_text())
+# Card-level review: ok confirms the source card, fix overrides non-empty fields ('-' clears one), drop removes a broken or duplicate card.
+card_reviews = {r['card_id']: r for r in csv.DictReader((source/'reviewed-cards.tsv').open(encoding='utf-8'), delimiter='\t', quoting=csv.QUOTE_NONE)}
 # Keep only attributed dialogue, never scene directions or unreviewed extraction.
 sentences = {s['sentence_id']: s for s in csv.DictReader((source/'sentences.csv').open(encoding='utf-8-sig'))}
 word_keys = defaultdict(list)
@@ -71,6 +73,11 @@ for r in rows:
     m=master.get(r['item_id'])
     d={'id':r['item_id'],'word':m['lemma'] if m else r['form'],'surface':r['form'],'meaning':r['meaning_ko'],'alternative':r['meaning_ko_alt'],'note':r['usage_note_ko'],'level':r['cefr'] or '미분류','type':r['item_type'],'pos':labels.get(r['pos_or_type'],'품사 확인 필요'),'reviewed':False}
     d.update(corrections.get(r['item_id'],{}))
+    review = card_reviews.get(r['item_id'])
+    if review and review['action'] == 'drop': continue
+    if review:
+        d.update({k: '' if v == '-' else v for k, v in review.items() if k in ('word','pos','meaning','alternative','note') and v})
+        d['reviewed'] = True
     example_id = r['item_id']
     # Reviewed headword/POS corrections must not inherit a different sense's occurrences.
     overrides = {'W-437bf7a520':('leave','VERB'), 'W-d169b6eb1a':('go','VERB'), 'W-455b4f5728':('good','ADJ')}
@@ -79,8 +86,8 @@ for r in rows:
         example_id = matches[0] if matches else ''
     d['examples']=select_examples(example_id, r['item_id'])
     data.append(d)
-assert len(data)==len(rows) and len({r['id'] for r in data})==len(data)
+assert len(data)+sum(r['action']=='drop' for r in card_reviews.values())==len(rows) and len({r['id'] for r in data})==len(data)
 (root/'apps/mobile/src/data/hp-vocabulary.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
-print(json.dumps({'records':len(data),'changedHeadwords':sum(d['word']!=d['surface'] for d in data),'reviewedCorrections':len(corrections)},ensure_ascii=False))
+print(json.dumps({'records':len(data),'changedHeadwords':sum(d['word']!=d['surface'] for d in data),'reviewedCorrections':len(corrections),'reviewedCards':sum(d['reviewed'] for d in data)},ensure_ascii=False))
 
 print(json.dumps({'withDialogue':sum(bool(d['examples']) for d in data),'withFour':sum(len(d['examples'])==4 for d in data),'translated':sum('ko' in e for d in data for e in d['examples'])}))
