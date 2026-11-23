@@ -9,7 +9,7 @@ const byId = new Map(vocabulary.map((w) => [w.id, w]));
 const shortPos: Record<string, string> = {
   명사: "명", 동사: "동", 형용사: "형", 부사: "부", 대명사: "대", 고유명사: "고유명",
   전치사: "전", 감탄사: "감", 수사: "수", 조동사: "조동", 한정사: "한정",
-  등위접속사: "접", 종속접속사: "접", 불변화사: "불변", "품사 확인 필요": "품사 미확인",
+  접속사: "접", 등위접속사: "접", 종속접속사: "접", 불변화사: "불변", "품사 확인 필요": "품사 미확인",
 };
 const compactPos = (pos: string) => pos.split(/\s*\/\s*/).map((part) => shortPos[part] ?? part).join("/");
 const storageKey = "lingoloop.hp-cards.v1";
@@ -33,6 +33,8 @@ export default function HpCards() {
   const [revealed, setRevealed] = useState(false);
   const [ready, setReady] = useState(false);
   const [storageError, setStorageError] = useState(false);
+  // The state before the last answer, kept in memory so a mis-tap can be taken back once.
+  const [undo, setUndo] = useState<{ round: Round; progress: Progress } | null>(null);
   useEffect(() => {
     if (Platform.OS === "web") try {
       const saved = localStorage.getItem(progressKey);
@@ -63,6 +65,7 @@ export default function HpCards() {
   const nextDue = Math.min(...poolIds.map((id) => progress[id]).filter((p) => p && !p.known).map((p) => p!.due));
   function begin(queue: string[]) {
     setRound({ dialogueOnly, level, kind, queue, count: queue.length, cursor: 0, remembered: 0, missed: [] });
+    setUndo(null);
     setRevealed(false); setExamplesOpen(false); setAllExamples(false); setPaused(false);
   }
   const start = () => begin(nextQueue(progress, poolIds, Date.now(), 10, shuffle));
@@ -70,15 +73,21 @@ export default function HpCards() {
     if (!round) return;
     const id = round.queue[round.cursor]!;
     const missed = round.missed ?? [];
+    setUndo({ round, progress });
     // A card forgotten earlier in this round stays scheduled for tomorrow even if remembered on retry.
     if (result === "forgot" || !missed.includes(id)) setProgress((p) => record(p, id, result, Date.now()));
     const forgot = result === "forgot";
     setRound({ ...round, queue: forgot ? [...round.queue, id] : round.queue, cursor: round.cursor + 1, remembered: round.remembered + Number(!forgot), missed: forgot && !missed.includes(id) ? [...missed, id] : missed });
     setRevealed(false); setExamplesOpen(false); setAllExamples(false); setPaused(false);
   }
+  function undoLast() {
+    if (!undo) return;
+    setRound(undo.round); setProgress(undo.progress); setUndo(null);
+    setRevealed(false); setExamplesOpen(false); setAllExamples(false);
+  }
   function resetProgress() {
     if (Platform.OS === "web" && !window.confirm("이 기기에 저장된 해리포터 카드 학습 기록을 모두 지울까요?")) return;
-    setProgress({}); setRound(null);
+    setProgress({}); setRound(null); setUndo(null);
   }
   const card = round ? byId.get(round.queue[round.cursor] ?? "") : null;
   const upcoming = round ? byId.get(round.queue[round.cursor + 1] ?? "")?.word : undefined;
@@ -126,12 +135,12 @@ export default function HpCards() {
           <Text style={{fontSize:23,lineHeight:33,fontWeight:"700",color:"#253656"}}>{card.meaning}</Text>
           {!!card.alternative && <Text style={{fontSize:14,lineHeight:21,color:"#62708A"}}>{card.alternative}</Text>}
           {!!card.note && <Text style={{fontSize:13,lineHeight:20,color:"#69758A"}}>{card.note}</Text>}
-          {!card.reviewed && <Text style={{fontSize:12,color:"#69758A"}}>원본 뜻 / 정확성 검토 중</Text>}
         </> : <Copy>어떤 뜻인지 떠올려 보세요.</Copy>}
       </View>
       {!revealed ? <>
         <Button title="뜻 확인하기" onPress={() => { setRevealed(true); setExamplesOpen(true); }} />
         <Button secondary title="이미 아는 단어예요" onPress={() => grade("known")} />
+        {undo && <UndoLink onPress={undoLast} />}
       </> : <>
         <View style={{flexDirection:"row",gap:10}}>
           <View style={{flex:1}}><Button secondary title="다시 연습" onPress={() => grade("forgot")} /></View>
@@ -146,12 +155,13 @@ export default function HpCards() {
               <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker} / 대본 {e.page}쪽</Text>
             </View>)}
             {!allExamples && card.examples.length > 1 && <Pressable accessibilityRole="button" onPress={() => setAllExamples(true)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>대사 {card.examples.length - 1}개 더 보기</Text></Pressable>}
-            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요.</Text>
+            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>제공된 대본에서 고른 대사로, 단어가 카드 뜻으로 쓰였는지 확인하고 해석을 붙였어요. 영화의 최종 대사와 다를 수 있어요.</Text>
           </> : <Copy>읽기 좋은 대사를 아직 찾지 못했어요. 확인되지 않은 문장은 넣지 않았습니다.</Copy>)}
         </View>
       </>}
     </> : <>
       <Heading>{round.count}개, 잘 마쳤어요</Heading>
+      {undo && <UndoLink onPress={undoLast} />}
       {(round.missed ?? []).length ? <>
         <Copy>헷갈렸던 단어 {round.missed!.length}개는 내일 다시 보여 드릴게요.</Copy>
         <View style={[styles.card, {gap:10}]}>{round.missed!.map((id) => { const w = byId.get(id)!; return <View key={id} style={{flexDirection:"row",gap:12,alignItems:"baseline"}}>
@@ -170,6 +180,9 @@ export default function HpCards() {
 function formatDue(due: number) {
   const days = Math.ceil((due - Date.now()) / (24 * 60 * 60 * 1000));
   return days <= 1 ? "내일" : `${days}일 뒤`;
+}
+function UndoLink({ onPress }: { onPress: () => void }) {
+  return <Pressable accessibilityRole="button" onPress={onPress}><Text style={{color:"#536585",paddingVertical:10,textAlign:"center"}}>방금 선택 취소</Text></Pressable>;
 }
 function Chip({ label, selected, onPress }: { label: string; selected: boolean; onPress: () => void }) {
   return <Pressable accessibilityRole="button" accessibilityState={{selected}} onPress={onPress} style={{minHeight:44,paddingHorizontal:16,justifyContent:"center",borderRadius:22,backgroundColor:selected ? "#304DB6" : "#E6EBF5"}}><Text style={{color:selected ? "white" : "#34415D",fontWeight:"600"}}>{label}</Text></Pressable>;
