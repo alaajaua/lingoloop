@@ -317,3 +317,16 @@ C1(카드 420여 개)과 C2(카드 370여 개)도 검수했습니다. 누적 7,7
 ### 배포 폴더 통합
 
 배포 폴더는 `hosting/hp-cards` 하나입니다. 따로 있던 `hosting/hp-cards-live`(10월 12일 빌드에 멈춰 있던 Sites 체크아웃)의 배포 이력(`.git`)을 `hosting/hp-cards`로 옮기고 폴더는 없앴습니다. 오래된 압축 파일 `hosting/hp-cards.tar.gz`도 저장소에서 뺐습니다. 번들 갱신은 `scripts/build-hp-cards.sh`, 배포는 `hosting/hp-cards`를 기존 Sites 프로젝트에 올리면 됩니다.
+## 2026-10-12: 선택형 뜻 퀴즈 및 기존 Site 재배포
+
+hp-cards에 뜻 고르기/암기 카드 모드를 추가하고 회차에 모드를 저장합니다. 같은 품사/유형의 뜻을 선택지로 구성하며, 동일 기본형/동일 뜻과 주요 뜻 또는 추가 뜻의 문자열 겹침을 제외합니다. 정답 공개 후 다음 단어를 누르면 기존 remembered/forgot 학습 기록과 반복 큐에 반영합니다. 의미적으로 유사한 오답까지 자동 보장하지 않으므로 전체 어휘의 선택지 검수는 남아 있습니다. 대사 출처의 페이지 표기는 UI에서 제거하고 원본 데이터에는 유지합니다.
+
+타입 검사, 해당 화면 lint, Expo 웹 export 통과. 브라우저에서 type 정답 선택, er 모르겠어요 피드백, 다음 카드 및 진행률 확인. 기존 복습/번역 데이터와 브라우저 저장을 유지했습니다. 화면 examples/hp-choice-quiz.png.
+
+기존 hosting/hp-cards의 source helper 열기가 빈 체크아웃을 요구하여 hosting/hp-cards-live에 동일 Site의 원격 소스를 열었습니다. 새 Site를 만들지 않았으며 이후 배포 소스는 hosting/hp-cards-live를 사용합니다. 기존 소스 폴더는 보존했습니다.
+
+재배포 성공: project appgprj_6acb9013ea908191bc2d34d53dc9d2b5, commit 5945e42fd24ad1e9caa74bd77c7b0a949007a82e, deployment appgdep_6acc92a7315c81918480308704cda4ce succeeded. 고정 주소 https://lingoloop-hp-cards.sone8056.chatgpt.site/hp-cards . 기존 본인 전용 접근 유지. 실제 원격 로그인 이후의 휴대폰 조작은 사용자 확인 필요.
+
+### 퀴즈 모드를 main에 맞춤
+
+2026-10-12의 "뜻 고르기" 퀴즈 모드는 병합 전 화면 코드에서 만들어져 `main`에 없었습니다(당시 배포본에만 있었습니다). 새 `main` 화면에 다시 얹었습니다. 퀴즈에서도 자정 기준 복습, "방금 선택 취소", 정답 공개 시 첫 대사와 해석 표시가 그대로 동작합니다. 위 10월 12일 항목의 "배포 소스는 hosting/hp-cards-live" 문장은 더 이상 맞지 않고, 배포 폴더는 `hosting/hp-cards` 하나입니다. 빌드는 entry-d9393bfe…입니다.
