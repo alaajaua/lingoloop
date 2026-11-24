@@ -106,7 +106,13 @@ for group in same.values():
         duplicates.update(d['id'] for d in copies if d is not max(copies, key=lambda d: len(d['examples'])))
 data = [d for d in data if d['id'] not in duplicates]
 assert kept==len(rows)-sum(bool(c.get('exclude')) for c in corrections.values()) and len({r['id'] for r in data})==len(data)
-(root/'apps/mobile/src/data/hp-vocabulary.json').write_text(json.dumps(data,ensure_ascii=False,separators=(',',':')))
+# One file per level so the app downloads only the level being studied.
+files = {'A1':'a1','A2':'a2','B1':'b1','B2':'b2','C1':'c1','C2':'c2','미분류':'unclassified'}
+assert {d['level'] for d in data} <= set(files)
+out = root/'apps/mobile/src/data/hp-vocabulary'
+out.mkdir(exist_ok=True)
+for level, name in files.items():
+    (out/f'{name}.json').write_text(json.dumps([d for d in data if d['level']==level],ensure_ascii=False,separators=(',',':')))
 print(json.dumps({'records':len(data),'changedHeadwords':sum(d['word']!=d['surface'] for d in data),'reviewedCorrections':len(corrections),'reviewedCards':sum(d['reviewed'] for d in data),'duplicatesDropped':len(duplicates)},ensure_ascii=False))
 
 print(json.dumps({'withDialogue':sum(bool(d['examples']) for d in data),'withFour':sum(len(d['examples'])==4 for d in data),'translated':sum('ko' in e for d in data for e in d['examples'])}))

@@ -2,10 +2,9 @@ import { prefetchPronunciation, WordPronunciation } from "../components/word-pro
 import { useEffect, useMemo, useState } from "react";
 import { Platform, Pressable, Text, View } from "react-native";
 import { router } from "expo-router";
-import vocabulary from "../data/hp-vocabulary.json";
+import { hpLevelsFor, loadHpLevel, type HpCard, type HpLevel } from "../data/hp-vocabulary";
 import { dueIds, isProgress, nextQueue, record, unseenIds, type Progress } from "../services/hp-progress";
 import { Screen, Heading, Copy, Button, styles } from "../components/auth-ui";
-const byId = new Map(vocabulary.map((w) => [w.id, w]));
 const shortPos: Record<string, string> = {
   명사: "명", 동사: "동", 형용사: "형", 부사: "부", 대명사: "대", 고유명사: "고유명",
   전치사: "전", 감탄사: "감", 수사: "수", 조동사: "조동", 한정사: "한정",
@@ -38,6 +37,12 @@ export default function HpCards() {
   const [storageError, setStorageError] = useState(false);
   // The state before the last answer, kept in memory so a mis-tap can be taken back once.
   const [undo, setUndo] = useState<{ round: Round; progress: Progress } | null>(null);
+  // Cards arrive one level at a time; a round read from storage waits here until its level has loaded.
+  const [loaded, setLoaded] = useState<Partial<Record<HpLevel, HpCard[]>>>({});
+  const [loadError, setLoadError] = useState(false);
+  const [loadAttempt, setLoadAttempt] = useState(0);
+  const [saved, setSaved] = useState<Round | null>(null);
+  const [restored, setRestored] = useState(false);
   useEffect(() => {
     if (Platform.OS === "web") try {
       const saved = localStorage.getItem(progressKey);
@@ -45,11 +50,31 @@ export default function HpCards() {
       const raw = localStorage.getItem(storageKey);
       if (raw) {
         const r = JSON.parse(raw) as Round;
-        if (Array.isArray(r.queue) && r.queue.length <= 10000 && r.queue.every((id) => byId.has(id)) && Number.isInteger(r.cursor) && r.cursor >= 0 && r.cursor <= r.queue.length && Number.isInteger(r.count) && r.count > 0 && r.count <= 10 && Number.isInteger(r.remembered) && r.remembered >= 0 && r.remembered <= r.count && (r.missed ?? []).every((id) => byId.has(id))) { setRound(r); setMode(r.mode === "quiz" ? "quiz" : "recall"); setDialogueOnly(r.dialogueOnly ?? false); if (["전체","A1","A2","B1","B2","C1","C2","미분류"].includes(r.level ?? "")) setLevel(r.level!); if (["전체","word","phrase"].includes(r.kind ?? "")) setKind(r.kind!); }
+        if (Array.isArray(r.queue) && r.queue.length <= 10000 && r.queue.every((id) => typeof id === "string") && Number.isInteger(r.cursor) && r.cursor >= 0 && r.cursor <= r.queue.length && Number.isInteger(r.count) && r.count > 0 && r.count <= 10 && Number.isInteger(r.remembered) && r.remembered >= 0 && r.remembered <= r.count && (r.missed ?? []).every((id) => typeof id === "string")) { setSaved(r); setMode(r.mode === "quiz" ? "quiz" : "recall"); setDialogueOnly(r.dialogueOnly ?? false); if (["전체","A1","A2","B1","B2","C1","C2","미분류"].includes(r.level ?? "")) setLevel(r.level!); if (["전체","word","phrase"].includes(r.kind ?? "")) setKind(r.kind!); }
       }
     } catch { setStorageError(true); }
-    setReady(true);
+    setRestored(true);
   }, []);
+  const roundLevel = (round ?? saved)?.level;
+  const hasRound = !!(round ?? saved);
+  const needed = useMemo(() => [...new Set([...hpLevelsFor(level), ...(hasRound ? hpLevelsFor(roundLevel) : [])])], [level, roundLevel, hasRound]);
+  useEffect(() => {
+    let active = true;
+    for (const l of needed) if (!loaded[l]) loadHpLevel(l)
+      .then((cards) => { if (active) setLoaded((before) => before[l] ? before : { ...before, [l]: cards }); })
+      .catch(() => { if (active) setLoadError(true); });
+    return () => { active = false; };
+  }, [needed, loaded, loadAttempt]);
+  const dataReady = needed.every((l) => loaded[l]);
+  const vocabulary = useMemo(() => needed.flatMap((l) => loaded[l] ?? []), [needed, loaded]);
+  const byId = useMemo(() => new Map(vocabulary.map((w) => [w.id, w])), [vocabulary]);
+  useEffect(() => {
+    if (!restored || ready || (saved && !dataReady)) return;
+    // A saved round is dropped if any of its cards has since left the deck.
+    if (saved && saved.queue.every((id) => byId.has(id)) && (saved.missed ?? []).every((id) => byId.has(id))) setRound(saved);
+    setSaved(null); setReady(true);
+  }, [restored, ready, saved, dataReady, byId]);
+  const retryLoad = () => { setLoadError(false); setLoadAttempt((n) => n + 1); };
   useEffect(() => {
     if (!ready || Platform.OS !== "web") return;
     try {
@@ -107,13 +132,13 @@ export default function HpCards() {
       if (picked.length === 4) break;
     }
     return shuffle(picked);
-  }, [card]);
+  }, [card, vocabulary, byId]);
   const upcoming = round ? byId.get(round.queue[round.cursor + 1] ?? "")?.word : undefined;
   useEffect(() => { if (upcoming) prefetchPronunciation(upcoming); }, [upcoming]);
   const movieNames: Record<string, string> = { HP01:"마법사의 돌", HP02:"비밀의 방", HP03:"아즈카반의 죄수", HP04:"불의 잔", HP05:"불사조 기사단", HP06:"혼혈 왕자", HP07:"죽음의 성물 1", HP08:"죽음의 성물 2" };
   return <Screen>
     <Text style={{ color: "#536585", fontSize: 14, fontWeight: "700", letterSpacing: 1 }}>LingoLoop / HARRY POTTER</Text>
-    {!ready ? <Copy>카드를 준비하고 있어요.</Copy> : !round || paused ? <>
+    {!ready ? (loadError ? <LoadFailed onRetry={retryLoad} /> : <Copy>카드를 준비하고 있어요.</Copy>) : !round || paused ? <>
       <Heading>대사 속 단어를
 내 단어로</Heading>
       <Copy>10개씩 가볍게. 뜻을 떠올리고, 해리포터 대사에서 다시 만나 보세요.</Copy>
@@ -124,8 +149,10 @@ export default function HpCards() {
       {paused && round && <Button title={`이어서 암기하기 (${round.remembered}/${round.count})`} onPress={() => setPaused(false)} />}
       <View style={[styles.card, { backgroundColor: "#F1F4FC" }]}>
         <Text style={{ fontSize: 17, fontWeight: "700", color: "#253656" }}>{level === "A2" ? "기초 A2" : level} / {kind === "word" ? "단어" : kind === "phrase" ? "구문" : "단어와 구문"}</Text>
-        <Copy>{dialogueOnly ? "대사가 있는 어휘" : "모든 어휘"} {pool.length.toLocaleString("ko-KR")}개 · 새 단어 {unseenCount.toLocaleString("ko-KR")}개 남음</Copy>
-        {(learningCount > 0 || knownCount > 0) && <Copy>외우는 중 {learningCount}개 · 아는 단어 {knownCount}개{dueCount > 0 ? ` · 오늘 복습 ${dueCount}개` : ""}</Copy>}
+        {dataReady && <>
+          <Copy>{dialogueOnly ? "대사가 있는 어휘" : "모든 어휘"} {pool.length.toLocaleString("ko-KR")}개 · 새 단어 {unseenCount.toLocaleString("ko-KR")}개 남음</Copy>
+          {(learningCount > 0 || knownCount > 0) && <Copy>외우는 중 {learningCount}개 · 아는 단어 {knownCount}개{dueCount > 0 ? ` · 오늘 복습 ${dueCount}개` : ""}</Copy>}
+        </>}
         <Pressable accessibilityRole="button" accessibilityState={{ expanded: settings }} onPress={() => setSettings(!settings)}><Text style={{color:"#304DB6", paddingVertical:10,fontWeight:"600"}}>{settings ? "설정 접기 −" : "학습 범위 바꾸기 +"}</Text></Pressable>
         {settings && <>
           <Copy>난이도</Copy>
@@ -136,7 +163,7 @@ export default function HpCards() {
           {Object.keys(progress).length > 0 && <Pressable accessibilityRole="button" onPress={resetProgress}><Text style={{color:"#9A3B3B",paddingVertical:10}}>학습 기록 지우기</Text></Pressable>}
         </>}
       </View>
-      {nextCount > 0 ? <Button title={paused ? "새 카드로 시작 (현재 회차 종료)" : dueCount > 0 ? `복습 ${Math.min(dueCount, 10)}개${nextCount > dueCount ? ` + 새 단어 ${nextCount - Math.min(dueCount, 10)}개` : ""} 시작` : `${nextCount}개 암기 시작`} onPress={start} />
+      {!dataReady ? (loadError ? <LoadFailed onRetry={retryLoad} /> : <Copy>이 난이도의 카드를 불러오고 있어요.</Copy>) : nextCount > 0 ? <Button title={paused ? "새 카드로 시작 (현재 회차 종료)" : dueCount > 0 ? `복습 ${Math.min(dueCount, 10)}개${nextCount > dueCount ? ` + 새 단어 ${nextCount - Math.min(dueCount, 10)}개` : ""} 시작` : `${nextCount}개 암기 시작`} onPress={start} />
         : <Copy>{pool.length ? `이 범위는 오늘 할 카드를 모두 마쳤어요.${Number.isFinite(nextDue) ? ` 다음 복습은 ${formatDue(nextDue)}이에요.` : ""} 다른 난이도를 골라 보세요.` : "이 범위에 해당하는 카드가 없어요."}</Copy>}
       <Copy>단어 떠올리기 → 뜻 확인 → 어려운 단어는 다음 날 다시</Copy>
       <Copy>진행은 이 기기의 브라우저에 저장돼요. 계정의 하루 목표와 복습 일정에는 합산하지 않아요.</Copy>
@@ -180,7 +207,7 @@ export default function HpCards() {
           {examplesOpen && (card.examples.length ? <>
             {(allExamples ? card.examples : card.examples.slice(0, 1)).map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
               <Text style={{fontSize:17,lineHeight:27,color:"#253656"}}>{highlight(e.text,e.surface)}</Text>
-              {(e as {ko?: string}).ko ? <Text style={{fontSize:15,lineHeight:23,color:"#4A5670"}}>{(e as {ko?: string}).ko}</Text> : null}
+              {!!e.ko && <Text style={{fontSize:15,lineHeight:23,color:"#4A5670"}}>{e.ko}</Text>}
               <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker}</Text>
             </View>)}
             {!allExamples && card.examples.length > 1 && <Pressable accessibilityRole="button" onPress={() => setAllExamples(true)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>대사 {card.examples.length - 1}개 더 보기</Text></Pressable>}
@@ -209,6 +236,9 @@ export default function HpCards() {
 function formatDue(due: number) {
   const days = Math.ceil((due - Date.now()) / (24 * 60 * 60 * 1000));
   return days <= 1 ? "내일" : `${days}일 뒤`;
+}
+function LoadFailed({ onRetry }: { onRetry: () => void }) {
+  return <><Copy error>카드를 불러오지 못했어요. 연결을 확인해 주세요.</Copy><Button secondary title="다시 불러오기" onPress={onRetry} /></>;
 }
 function UndoLink({ onPress }: { onPress: () => void }) {
   return <Pressable accessibilityRole="button" onPress={onPress}><Text style={{color:"#536585",paddingVertical:10,textAlign:"center"}}>방금 선택 취소</Text></Pressable>;
