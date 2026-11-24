@@ -10,3 +10,7 @@ dist/
 .DS_Store
 
 .local/
+
+# Deploy archives and stray copies of the deploy folder; hosting/hp-cards is the only one.
+hosting/*.tar.gz
+hosting/hp-cards-live/

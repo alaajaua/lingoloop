@@ -313,3 +313,7 @@ C1(카드 420여 개)과 C2(카드 370여 개)도 검수했습니다. 누적 7,7
 - 표제어와 품사가 같은 중복 카드 117장을 뺐습니다. `reviewed-cards.tsv`에서 제외로 판정한 카드는 같은 표제어·품사의 다른 카드가 남을 때만 빠지고, 뜻까지 같은 카드는 대사가 많은 쪽만 남깁니다. 뜻이 다른 카드(`get` 얻다 / ~당하다)는 그대로 둡니다. 앱 카드는 10,175장, 대사는 8,933개입니다.
 - `tests/hp-vocabulary.test.ts`가 카드 중복과 해석 없는 대사를 검사합니다.
 - `scripts/build-hp-cards.sh` 하나로 데이터 생성, 단독 모드 빌드, `hosting/hp-cards` 반영까지 합니다. 이번 빌드는 entry-891e943b…입니다.
+
+### 배포 폴더 통합
+
+배포 폴더는 `hosting/hp-cards` 하나입니다. 따로 있던 `hosting/hp-cards-live`(10월 12일 빌드에 멈춰 있던 Sites 체크아웃)의 배포 이력(`.git`)을 `hosting/hp-cards`로 옮기고 폴더는 없앴습니다. 오래된 압축 파일 `hosting/hp-cards.tar.gz`도 저장소에서 뺐습니다. 번들 갱신은 `scripts/build-hp-cards.sh`, 배포는 `hosting/hp-cards`를 기존 Sites 프로젝트에 올리면 됩니다.
