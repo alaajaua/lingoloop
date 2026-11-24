@@ -1,3 +1,8 @@
 # LingoLoop hosted cards
 
-Expo web export retained in public with document served at /hp-cards. Root redirects there. Pronunciation proxy runs on the hosted Worker and never calls the local Mac. No local database or credentials included. Update assets by rebuilding apps/mobile with EXPO_PUBLIC_HP_STANDALONE=1 EXPO_PUBLIC_API_URL=/api.
+The only deploy folder for the Harry Potter cards site (Sites project in `.openai/hosting.json`). Deploy this folder; do not keep a second copy.
+
+- The Expo web export lives in `public`, and the document is served at `/hp-cards`. Root redirects there.
+- The pronunciation proxy runs on the hosted Worker and never calls the local Mac. No local database or credentials are included.
+- Update the bundle with `scripts/build-hp-cards.sh` from the repository root, then deploy.
+- This folder keeps its own `.git` with the Sites deploy history ("Update Site source"). The parent repository tracks the same files and ignores that inner `.git`.
