@@ -1,4 +1,4 @@
-import { WordPronunciation } from "../components/word-pronunciation";
+import { prefetchPronunciation, WordPronunciation } from "../components/word-pronunciation";
 import { useEffect, useMemo, useState } from "react";
 import { Platform, Pressable, Text, View } from "react-native";
 import { router } from "expo-router";
@@ -9,7 +9,7 @@ const byId = new Map(vocabulary.map((w) => [w.id, w]));
 const shortPos: Record<string, string> = {
   명사: "명", 동사: "동", 형용사: "형", 부사: "부", 대명사: "대", 고유명사: "고유명",
   전치사: "전", 감탄사: "감", 수사: "수", 조동사: "조동", 한정사: "한정",
-  등위접속사: "접", 종속접속사: "접", 불변화사: "불변", "품사 확인 필요": "품사 미확인",
+  접속사: "접", 등위접속사: "접", 종속접속사: "접", 불변화사: "불변", "품사 확인 필요": "품사 미확인",
 };
 const compactPos = (pos: string) => pos.split(/\s*\/\s*/).map((part) => shortPos[part] ?? part).join("/");
 const storageKey = "lingoloop.hp-cards.v1";
@@ -24,16 +24,20 @@ export default function HpCards() {
   const [level, setLevel] = useState("A2");
   const [kind, setKind] = useState("word");
   const [mode, setMode] = useState<"recall" | "quiz">("quiz");
+  // The option picked in quiz mode; "" means "모르겠어요".
   const [answer, setAnswer] = useState<string | null>(null);
   const [settings, setSettings] = useState(false);
   const [paused, setPaused] = useState(false);
   const [dialogueOnly, setDialogueOnly] = useState(true);
   const [examplesOpen, setExamplesOpen] = useState(false);
+  const [allExamples, setAllExamples] = useState(false);
   const [round, setRound] = useState<Round | null>(null);
   const [progress, setProgress] = useState<Progress>({});
   const [revealed, setRevealed] = useState(false);
   const [ready, setReady] = useState(false);
   const [storageError, setStorageError] = useState(false);
+  // The state before the last answer, kept in memory so a mis-tap can be taken back once.
+  const [undo, setUndo] = useState<{ round: Round; progress: Progress } | null>(null);
   useEffect(() => {
     if (Platform.OS === "web") try {
       const saved = localStorage.getItem(progressKey);
@@ -64,25 +68,33 @@ export default function HpCards() {
   const nextDue = Math.min(...poolIds.map((id) => progress[id]).filter((p) => p && !p.known).map((p) => p!.due));
   function begin(queue: string[]) {
     setRound({ mode, dialogueOnly, level, kind, queue, count: queue.length, cursor: 0, remembered: 0, missed: [] });
-    setRevealed(false); setAnswer(null); setExamplesOpen(false); setPaused(false);
+    setUndo(null);
+    setRevealed(false); setAnswer(null); setExamplesOpen(false); setAllExamples(false); setPaused(false);
   }
   const start = () => begin(nextQueue(progress, poolIds, Date.now(), 10, shuffle));
   function grade(result: "known" | "remembered" | "forgot") {
     if (!round) return;
     const id = round.queue[round.cursor]!;
     const missed = round.missed ?? [];
+    setUndo({ round, progress });
     // A card forgotten earlier in this round stays scheduled for tomorrow even if remembered on retry.
     if (result === "forgot" || !missed.includes(id)) setProgress((p) => record(p, id, result, Date.now()));
     const forgot = result === "forgot";
     setRound({ ...round, queue: forgot ? [...round.queue, id] : round.queue, cursor: round.cursor + 1, remembered: round.remembered + Number(!forgot), missed: forgot && !missed.includes(id) ? [...missed, id] : missed });
-    setRevealed(false); setAnswer(null); setExamplesOpen(false); setPaused(false);
+    setRevealed(false); setAnswer(null); setExamplesOpen(false); setAllExamples(false); setPaused(false);
+  }
+  function undoLast() {
+    if (!undo) return;
+    setRound(undo.round); setProgress(undo.progress); setUndo(null);
+    setRevealed(false); setAnswer(null); setExamplesOpen(false); setAllExamples(false);
   }
   function resetProgress() {
     if (Platform.OS === "web" && !window.confirm("이 기기에 저장된 해리포터 카드 학습 기록을 모두 지울까요?")) return;
-    setProgress({}); setRound(null);
+    setProgress({}); setRound(null); setUndo(null);
   }
   const card = round ? byId.get(round.queue[round.cursor] ?? "") : null;
   const quiz = round?.mode === "quiz";
+  // Wrong options share the card's part of speech and type but no overlapping meaning text.
   const options = useMemo(() => {
     if (!card) return [];
     const parts = (s: string) => s.split(/[,;/()]/).map((v) => v.trim()).filter(Boolean);
@@ -96,6 +108,8 @@ export default function HpCards() {
     }
     return shuffle(picked);
   }, [card]);
+  const upcoming = round ? byId.get(round.queue[round.cursor + 1] ?? "")?.word : undefined;
+  useEffect(() => { if (upcoming) prefetchPronunciation(upcoming); }, [upcoming]);
   const movieNames: Record<string, string> = { HP01:"마법사의 돌", HP02:"비밀의 방", HP03:"아즈카반의 죄수", HP04:"불의 잔", HP05:"불사조 기사단", HP06:"혼혈 왕자", HP07:"죽음의 성물 1", HP08:"죽음의 성물 2" };
   return <Screen>
     <Text style={{ color: "#536585", fontSize: 14, fontWeight: "700", letterSpacing: 1 }}>LingoLoop / HARRY POTTER</Text>
@@ -118,7 +132,7 @@ export default function HpCards() {
           <View style={{flexDirection:"row", flexWrap:"wrap", gap:8}}>{["전체","A1","A2","B1","B2","C1","C2","미분류"].map((v) => <Chip key={v} label={v} selected={level === v} onPress={() => setLevel(v)} />)}</View>
           <View style={{flexDirection:"row", flexWrap:"wrap", gap:8}}>{[["전체","모두"],["word","단어"],["phrase","구문"]].map(([v,label]) => <Chip key={v} label={label!} selected={kind === v} onPress={() => setKind(v!)} />)}</View>
           <Chip label="대사가 있는 어휘만" selected={dialogueOnly} onPress={() => setDialogueOnly(!dialogueOnly)} />
-          <Copy>난이도와 뜻은 원본 자료 기준이며 검토 중입니다.</Copy>
+          <Copy>모든 난이도의 뜻과 대사 검토를 마쳤어요. 대사는 카드 뜻과 맞는 것만 한국어 번역과 함께 보여 드려요.</Copy>
           {Object.keys(progress).length > 0 && <Pressable accessibilityRole="button" onPress={resetProgress}><Text style={{color:"#9A3B3B",paddingVertical:10}}>학습 기록 지우기</Text></Pressable>}
         </>}
       </View>
@@ -143,15 +157,16 @@ export default function HpCards() {
           <Text style={{fontSize:23,lineHeight:33,fontWeight:"700",color:"#253656"}}>{card.meaning}</Text>
           {!!card.alternative && <Text style={{fontSize:14,lineHeight:21,color:"#62708A"}}>{card.alternative}</Text>}
           {!!card.note && <Text style={{fontSize:13,lineHeight:20,color:"#69758A"}}>{card.note}</Text>}
-          {!card.reviewed && <Text style={{fontSize:12,color:"#69758A"}}>원본 뜻 / 정확성 검토 중</Text>}
         </> : <Copy>{quiz ? "알맞은 뜻을 골라 보세요." : "어떤 뜻인지 떠올려 보세요."}</Copy>}
       </View>
       {!revealed && quiz ? <View style={{gap:10}}>
-        {options.map((option) => <Button key={option} secondary title={option} onPress={() => { if (answer !== null) return; setAnswer(option); setRevealed(true); }} />)}
-        <Button secondary title="모르겠어요" onPress={() => {setAnswer("");setRevealed(true);}} />
+        {options.map((option) => <Button key={option} secondary title={option} onPress={() => { if (answer !== null) return; setAnswer(option); setRevealed(true); setExamplesOpen(true); }} />)}
+        <Button secondary title="모르겠어요" onPress={() => { setAnswer(""); setRevealed(true); setExamplesOpen(true); }} />
+        {undo && <UndoLink onPress={undoLast} />}
       </View> : !revealed ? <>
-        <Button title="뜻 확인하기" onPress={() => setRevealed(true)} />
+        <Button title="뜻 확인하기" onPress={() => { setRevealed(true); setExamplesOpen(true); }} />
         <Button secondary title="이미 아는 단어예요" onPress={() => grade("known")} />
+        {undo && <UndoLink onPress={undoLast} />}
       </> : <>
         {quiz ? <>
           <Copy>{answer === card.meaning ? "정답이에요!" : `정답은 ‘${card.meaning}’이에요. 다시 연습할게요.`}</Copy>
@@ -161,21 +176,21 @@ export default function HpCards() {
           <View style={{flex:1}}><Button title="기억했어요" onPress={() => grade("remembered")} /></View>
         </View>}
         <View style={{gap:16}}>
-          <Text style={{fontSize:17,fontWeight:"700",color:"#253656",paddingTop:12}}>대사로 기억하기</Text>
-          {card.examples.length ? <>
-            {/* The first line stays open so the dialogue is seen without an extra tap; the rest are optional. */}
-            {(examplesOpen ? card.examples : card.examples.slice(0, 1)).map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
+          <Pressable accessibilityRole="button" accessibilityState={{expanded:examplesOpen}} onPress={() => setExamplesOpen(!examplesOpen)}><Text style={{fontSize:17,fontWeight:"700",color:"#253656",paddingVertical:12}}>대사로 기억하기 {card.examples.length ? `(${card.examples.length})` : ""} {examplesOpen ? "−" : "+"}</Text></Pressable>
+          {examplesOpen && (card.examples.length ? <>
+            {(allExamples ? card.examples : card.examples.slice(0, 1)).map((e) => <View key={e.sentenceId} style={{borderLeftWidth:3,borderLeftColor:"#BBC8F1",paddingLeft:16,gap:8}}>
               <Text style={{fontSize:17,lineHeight:27,color:"#253656"}}>{highlight(e.text,e.surface)}</Text>
-              {!!translation(e) && <Text style={{fontSize:15,lineHeight:23,color:"#45526B"}}>{translation(e)}</Text>}
+              {(e as {ko?: string}).ko ? <Text style={{fontSize:15,lineHeight:23,color:"#4A5670"}}>{(e as {ko?: string}).ko}</Text> : null}
               <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{movieNames[e.movie] ?? e.movie} / {e.speaker}</Text>
             </View>)}
-            {card.examples.length > 1 && <Pressable accessibilityRole="button" accessibilityState={{expanded:examplesOpen}} onPress={() => setExamplesOpen(!examplesOpen)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>{examplesOpen ? "대사 접기 −" : `다른 대사 ${card.examples.length - 1}개 더 보기 +`}</Text></Pressable>}
-            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>{card.examples.every((e) => !!translation(e)) ? "제공된 대본에서 고른 대사로, 단어가 이 뜻으로 쓰였는지와 해석을 검수했어요. 영화의 최종 대사와 다를 수 있어요." : "제공된 대본에서 자동 선별한 대사입니다. 영화의 최종 대사와 다를 수 있으며, 예문의 뜻은 문맥에 따라 달라질 수 있어요."}</Text>
-          </> : <Copy>읽기 좋은 대사를 아직 찾지 못했어요. 확인되지 않은 문장은 넣지 않았습니다.</Copy>}
+            {!allExamples && card.examples.length > 1 && <Pressable accessibilityRole="button" onPress={() => setAllExamples(true)}><Text style={{color:"#304DB6",fontWeight:"600",paddingVertical:10}}>대사 {card.examples.length - 1}개 더 보기</Text></Pressable>}
+            <Text style={{fontSize:12,lineHeight:19,color:"#69758A"}}>제공된 대본에서 고른 대사로, 단어가 카드 뜻으로 쓰였는지 확인하고 해석을 붙였어요. 영화의 최종 대사와 다를 수 있어요.</Text>
+          </> : <Copy>읽기 좋은 대사를 아직 찾지 못했어요. 확인되지 않은 문장은 넣지 않았습니다.</Copy>)}
         </View>
       </>}
     </> : <>
       <Heading>{round.count}개, 잘 마쳤어요</Heading>
+      {undo && <UndoLink onPress={undoLast} />}
       {(round.missed ?? []).length ? <>
         <Copy>헷갈렸던 단어 {round.missed!.length}개는 내일 다시 보여 드릴게요.</Copy>
         <View style={[styles.card, {gap:10}]}>{round.missed!.map((id) => { const w = byId.get(id)!; return <View key={id} style={{flexDirection:"row",gap:12,alignItems:"baseline"}}>
@@ -191,13 +206,12 @@ export default function HpCards() {
     {storageError && <Copy error>진행을 저장하지 못했어요. 새로고침하면 이번 회차가 사라질 수 있어요.</Copy>}
   </Screen>;
 }
-// Only reviewed lines carry a Korean translation in the generated JSON.
-function translation(example: object) {
-  return "ko" in example && typeof example.ko === "string" ? example.ko : "";
-}
 function formatDue(due: number) {
   const days = Math.ceil((due - Date.now()) / (24 * 60 * 60 * 1000));
   return days <= 1 ? "내일" : `${days}일 뒤`;
+}
+function UndoLink({ onPress }: { onPress: () => void }) {
+  return <Pressable accessibilityRole="button" onPress={onPress}><Text style={{color:"#536585",paddingVertical:10,textAlign:"center"}}>방금 선택 취소</Text></Pressable>;
 }
 function Chip({ label, selected, onPress }: { label: string; selected: boolean; onPress: () => void }) {
   return <Pressable accessibilityRole="button" accessibilityState={{selected}} onPress={onPress} style={{minHeight:44,paddingHorizontal:16,justifyContent:"center",borderRadius:22,backgroundColor:selected ? "#304DB6" : "#E6EBF5"}}><Text style={{color:selected ? "white" : "#34415D",fontWeight:"600"}}>{label}</Text></Pressable>;
